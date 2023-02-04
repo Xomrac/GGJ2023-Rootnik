@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Rewired;
-using Sirenix.OdinInspector;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -12,12 +10,18 @@ public class MovementAroundPlanet : MonoBehaviour
     public float vel;
     private Vector3 currCenterPlanet;
     private Player player;
+    public Transform piedi;
     [Range(0, 6.28f)] private float angle;
     public PlanetStats firstPlanet;
     public PlanetStats second;
+    public PlanetStats curr;
+    private Animator animator;
+    public GameObject basePrefab;
+
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         player = ReInput.players.GetPlayer(0);
         player.controllers.maps.SetMapsEnabled(false, RewiredConsts.Category.OnPlanet);
         OnLand(firstPlanet);
@@ -25,17 +29,20 @@ public class MovementAroundPlanet : MonoBehaviour
 
     private void OnLand(PlanetStats planet)
     {
-        transform.position =new Vector3(planet.landingPoint.position.x,planet.landingPoint.position.y+(GetComponent<Collider>().bounds.extents.y*3),planet.landingPoint.position.z);
+        curr = planet;
+        transform.position = new Vector3(planet.landingPoint.position.x,
+            planet.landingPoint.position.y+ (GetComponent<Collider>().bounds.extents.y ),
+            planet.landingPoint.position.z);
         currCenterPlanet = planet.transform.position;
         player.controllers.maps.SetMapsEnabled(true, RewiredConsts.Category.OnPlanet);
-        radius= Vector3.Distance(transform.position, planet.gameObject.transform.position);
+        radius = Vector3.Distance(transform.position, planet.gameObject.transform.position);
         planet.lastVisitedTime = 0;
         Debug.DrawLine(transform.position, currCenterPlanet, Color.red, 10f);
         foreach (var instancePlanet in PlanetsManager.Instance.planets)
         {
-            if (instancePlanet!=planet)
+            if (instancePlanet != planet)
             {
-                instancePlanet.lastVisitedTime++;
+                //instancePlanet.lastVisitedTime++;
             }
         }
     }
@@ -53,20 +60,55 @@ public class MovementAroundPlanet : MonoBehaviour
         transform.position = newPos;
         transform.rotation = rot;
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnLand(second);
         }
+
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             OnLand(firstPlanet);
         }
+
         if (player.GetAxis(RewiredConsts.Action.Move) != 0)
         {
-           Move();
+            Move();
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
+
+        if (player.GetButtonDown(RewiredConsts.Action.Plant))
+        {
+            if (curr.Roots.Count <= 2)
+            {
+                animator.SetTrigger("Plant");
+                var temp = Instantiate(basePrefab, piedi.position, transform.rotation);
+                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius",
+                    Vector3.Distance(piedi.position, curr.transform.position));
+                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(1));
+                temp.GetComponentInChildren<Root>().planetWhereIsPlanted = curr;
+                curr.Roots.Add(temp.GetComponentInChildren<Root>());
+            }
         }
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponentInChildren<Root>())
+        {
+            var temp = other.GetComponentInChildren<Root>();
+            Debug.Log("plant!");
+            if (!temp.wasUsedInThisVisit)
+            {
+                temp.currGrowth += temp.howMuchGrows;
+                StartCoroutine(temp.RootAnimation(temp.currGrowth));
+            }
+        }
+    }
 }

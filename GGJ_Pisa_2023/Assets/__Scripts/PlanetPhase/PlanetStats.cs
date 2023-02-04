@@ -21,20 +21,17 @@ public struct PondMinAndObjects
 [Serializable]
 public class PlanetStats: SerializedMonoBehaviour , ISavable
 {
-    public int lastVisitedTime;
-    public string UID;
+    public float lastVisitedTime;
     public int rootsPlanted;
     public layers maxReached;
+    public string UID;
     public Transform landingPoint;
     public Dictionary<layers, PondMinAndObjects> pondsValue;
     public Dictionary<layers, int> gainValue;
+    public List<Root> Roots;
 
     //si guadagna max maggiore metà minore
-
-    private void Start()
-    {
-        landingPoint = gameObject.GetComponentInChildren<Transform>();
-    }
+    
 
     public void SpawnPonds()
     {
