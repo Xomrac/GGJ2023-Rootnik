@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Jam;
 using UnityEngine;
 
 
@@ -13,18 +14,13 @@ public class Root : MonoBehaviour
     public float howMuchDecres;
     public float currGrowth;
     public float maxRadius;
+    public float HeightForLayer2;
+    public float HeightForLayer3;
 
-    private void OnTriggerEnter(Collider other)
+    public void setHeights()
     {
-        if (other.CompareTag("Layer1"))
-        {
-            layer = layers.Layer2;
-        }
-
-        if (other.CompareTag("Layer2"))
-        {
-            layer = layers.Layer3;
-        }
+        HeightForLayer2 =  planetWhereIsPlanted.radiusLenght3-maxRadius;
+        HeightForLayer3 = planetWhereIsPlanted.radiusLenght2-maxRadius;
     }
 
     public void CollectResource()
@@ -36,8 +32,17 @@ public class Root : MonoBehaviour
         }
         else
         {
-            Debug.Log(planetWhereIsPlanted.gainValue[layer]);
-            
+            if (planetWhereIsPlanted.Roots.IndexOf(this)!=0)
+            {
+                PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer]/2f;
+                Debug.Log(PlayerResources.currentFood+" half");
+            }
+            else
+            {
+                PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer];
+                Debug.Log(PlayerResources.currentFood);
+            }
+
         }
     }
 
@@ -63,12 +68,21 @@ public class Root : MonoBehaviour
         while (elapsed < timeAnim)
         {
             elapsed += Time.deltaTime;
-            val = Mathf.Lerp(0, howMuchToGrow, elapsed/timeAnim);
+            val = Mathf.Lerp(currGrowth, howMuchToGrow, elapsed/timeAnim);
             GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", val);
             yield return null;
         }
-
         currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
+        if (currGrowth>HeightForLayer2)
+        {
+            layer = layers.Layer2;
+        }
+
+        if (currGrowth>HeightForLayer3)
+        {
+            layer = layers.Layer3;
+
+        }
         maxRadius= GetComponentInChildren<MeshRenderer>().material.GetFloat("_Radius");
         CollectResource();
     }
