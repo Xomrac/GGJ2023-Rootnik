@@ -39,9 +39,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 0.04
+    - _FresnelPower: 0.2
+    - _NoiseScale: 97.1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Range: 0.25
+    - _StepPower: 0.5
+    - _Time: 1.21
+    - _TimePower: 0.05
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &8664200218319739420
