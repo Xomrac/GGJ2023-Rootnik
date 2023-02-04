@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8120487715528462264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -801,8 +801,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 06e1054a6f0e981438d3957261f2074a, type: 3}
-    - {fileID: 21300000, guid: 95c6cef1545932344a1ce3aaaa947e6b, type: 3}
+    - {fileID: 21300000, guid: 49dfae0a6f693d041b64ed5964fb751f, type: 3}
+    - {fileID: 21300000, guid: 484d6ee9ac7421a4d9c5ac92a66fbb19, type: 3}
     - {fileID: 21300000, guid: 5979e41408755b440af0691321defc53, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -875,6 +875,6 @@ MonoBehaviour:
   resourcesManager: {fileID: 0}
   fadeTime: 0.3
   buttons:
-  - {fileID: 8120487716999141486}
   - {fileID: 8120487716715274899}
+  - {fileID: 8120487716999141486}
   - {fileID: 8120487715528462267}
