@@ -59,7 +59,7 @@ public class RadialMenuController : SerializedMonoBehaviour
 		{
 			buttons[index].gameObject.SetActive(true);
 			buttons[index].onClick.RemoveAllListeners();
-			buttons[index].image.sprite = resourcesSprites[keyValuePair.Key];
+			buttons[index].GetComponent<Image>().sprite = resourcesSprites[keyValuePair.Key];
 			buttons[index].onClick.AddListener(TurnOffButtons);
 			buttons[index].onClick.AddListener(() =>{resourcesManager.StartConsume(keyValuePair.Key, keyValuePair.Value);});
 			index++;
