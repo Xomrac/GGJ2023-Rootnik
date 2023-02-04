@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: c70343630d66b454297bd3fddd6b8fa8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2b15961abed66684db7795412d99172f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -39,9 +39,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 0.04
+    - _FresnelPower: 0.2
+    - _NoiseScale: 97.1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Range: 0.25
+    - _StepPower: 0.5
+    - _Time: 1.21
+    - _TimePower: 0.05
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &8664200218319739420

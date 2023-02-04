@@ -25,13 +25,6 @@ public class ShipResourcesManager : MonoBehaviour
     [HorizontalGroup("Resources Amount/Levels")][LabelText("Oxygen")][LabelWidth(50)][SerializeField] private float oxygenLevel;
     public float OxygenLevel => oxygenLevel;
     
-    [BoxGroup("Resources Consume Per Frame")]
-    [HorizontalGroup("Resources Consume Per Frame/Depletes")][LabelWidth(40)][LabelText("Food")][SerializeField] private float foodDepletionRate;
-    public float FoodDepletionRate => foodDepletionRate;
-    [HorizontalGroup("Resources Consume Per Frame/Depletes")][LabelWidth(40)][LabelText("Water")][SerializeField] private float waterDepletionRate;
-    public float WaterDepletionRate => waterDepletionRate;
-    [HorizontalGroup("Resources Consume Per Frame/Depletes")][LabelWidth(50)][LabelText("Oxygen")][SerializeField] private float oxygenDepletionRate;
-    public float OxygenDepletionRate => oxygenDepletionRate;
 
     private void OnEnable()
     {
@@ -49,7 +42,7 @@ public class ShipResourcesManager : MonoBehaviour
     {
         StopAllCoroutines();
     }
-    public void StartConsume(ResourceType resourceType)
+    public void StartConsume(ResourceType resourceType,float consume)
     {
         StartCoroutine(ConsumeCoroutine());
         IEnumerator ConsumeCoroutine()
@@ -57,21 +50,21 @@ public class ShipResourcesManager : MonoBehaviour
             switch (resourceType)
             {
                 case ResourceType.Food:
-                    foodLevel -= foodDepletionRate;
+                    foodLevel -= consume;
                     if (foodLevel<0)
                     {
                         foodLevel = 0;
                     }
                     break;
                 case ResourceType.Water:
-                    waterLevel -= waterDepletionRate;
+                    waterLevel -= consume;
                     if (waterLevel<0)
                     {
                         waterLevel = 0;
                     }
                     break;
                 case ResourceType.Oxygen:
-                    oxygenLevel -= oxygenDepletionRate;
+                    oxygenLevel -= consume;
                     if (oxygenLevel<0)
                     {
                         oxygenLevel = 0;
@@ -81,7 +74,5 @@ public class ShipResourcesManager : MonoBehaviour
             yield return null;
             StartCoroutine(ConsumeCoroutine());
         }
-        
     }
-    
 }

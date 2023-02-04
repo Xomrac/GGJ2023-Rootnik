@@ -10,23 +10,14 @@ namespace Jam
 {
 
 	[RequireComponent(typeof(BoxCollider))]
-	public class ShipInteractionPoint : MonoBehaviour
+	public class ShipInteractionPoint : SerializedMonoBehaviour
 	{
-		public static event Action<ResourceType> onEnteringPoint;
-		
+		public static event Action<ResourceType, float> onEnteringPoint;
+
 		public static event Action onExitPoint;
 
-		[SerializeField] [EnumToggleButtons] private List<ResourceType> resourceToConsume;
-		[SerializeField] private float timeToStartConsume;
-
-#if UNITY_EDITOR
-
-		private void OnValidate()
-		{
-			resourceToConsume = resourceToConsume.Distinct().ToList();
-		}
-
-#endif
+		[LabelWidth(100)]public Dictionary<ResourceType, float> consumes = new Dictionary<ResourceType, float>();
+		private float timeToStartConsume;
 
 		private void OnTriggerEnter(Collider other)
 		{
@@ -34,12 +25,13 @@ namespace Jam
 			{
 				StartCoroutine(Waiter());
 			}
+
 			IEnumerator Waiter()
 			{
 				yield return new WaitForSeconds(timeToStartConsume);
-				foreach (ResourceType resourceType in resourceToConsume)
+				foreach (KeyValuePair<ResourceType, float> consume in consumes)
 				{
-					onEnteringPoint?.Invoke(resourceType);
+					onEnteringPoint?.Invoke(consume.Key, consume.Value);
 				}
 			}
 		}
