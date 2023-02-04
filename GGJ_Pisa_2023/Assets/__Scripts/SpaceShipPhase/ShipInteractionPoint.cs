@@ -12,27 +12,23 @@ namespace Jam
 	[RequireComponent(typeof(BoxCollider))]
 	public class ShipInteractionPoint : SerializedMonoBehaviour
 	{
-		public static event Action<ResourceType, float> onEnteringPoint;
+		public static event Action<Dictionary<ResourceType, float>> onEnteringPoint;
 
 		public static event Action onExitPoint;
 
 		[LabelWidth(100)]public Dictionary<ResourceType, float> consumes = new Dictionary<ResourceType, float>();
 		private float timeToStartConsume;
 
+		[ReadOnly] public bool entered=false;
+
 		private void OnTriggerEnter(Collider other)
 		{
+			if (entered) return;
 			if (other.CompareTag("Player"))
 			{
-				StartCoroutine(Waiter());
-			}
-
-			IEnumerator Waiter()
-			{
-				yield return new WaitForSeconds(timeToStartConsume);
-				foreach (KeyValuePair<ResourceType, float> consume in consumes)
-				{
-					onEnteringPoint?.Invoke(consume.Key, consume.Value);
-				}
+				Debug.Log("Entered!");
+				onEnteringPoint?.Invoke(consumes);
+				entered = true;
 			}
 		}
 
@@ -42,6 +38,7 @@ namespace Jam
 			{
 				StopAllCoroutines();
 				onExitPoint?.Invoke();
+				entered = false;
 			}
 		}
 

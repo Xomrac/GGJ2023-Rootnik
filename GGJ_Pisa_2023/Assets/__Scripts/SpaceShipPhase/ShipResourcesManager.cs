@@ -28,13 +28,11 @@ public class ShipResourcesManager : MonoBehaviour
 
     private void OnEnable()
     {
-        ShipInteractionPoint.onEnteringPoint += StartConsume;
         ShipInteractionPoint.onExitPoint += StopConsume;
     }
 
     private void OnDisable()
     {
-        ShipInteractionPoint.onEnteringPoint -= StartConsume;
         ShipInteractionPoint.onExitPoint -= StopConsume;
     }
 
