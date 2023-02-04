@@ -15,7 +15,6 @@ public class SaveAndLoad : MonoBehaviour {
     private AsyncOperation operation;
 
     public void Save() {
-        ScreenCapture.CaptureScreenshot(Application.dataPath + $"/saves/screen{slot}.png");
         StartSave();
         XmlSerializer serializer = new XmlSerializer(typeof(Data));
         var encoding = Encoding.GetEncoding("UTF-8");
