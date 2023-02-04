@@ -1,0 +1,6 @@
+
+interface ISavable
+{
+    void OnSave();
+}
+
