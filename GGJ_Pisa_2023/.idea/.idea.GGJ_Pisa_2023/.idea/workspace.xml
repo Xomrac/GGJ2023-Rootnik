@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d1618-3bdb-4e93-a837-8a8f1eaf0778" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Rewired Input Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Rewired Input Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RewiredConsts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RewiredConsts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Pipe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Plant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Plant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_LevelDesignScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_LevelDesignScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_Rotation around planet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_Rotation around planet.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Shaders/Root 1.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Shaders/Root 1.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Shaders/Roots 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Shaders/Roots 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Shaders/Roots.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Shaders/Roots.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,14 +27,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/6a/31866c99/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/b0/d480df68/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/EnanchedEditor/Scripts/SceneSwitcher/Editor/SceneSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RadialMenuController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetRankData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/Save/SaveAndLoad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/__Scripts/SelectablePlanet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2LCImoUN2BFvcFV5jRgQfxsx27G" />
   <component name="ProjectViewState">
