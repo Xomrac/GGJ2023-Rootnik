@@ -44,7 +44,7 @@ public class MovementAroundPlanet : MonoBehaviour
             {
                 foreach (var VARIABLE in instancePlanet.Roots)
                 {
-                    VARIABLE.Decrease();
+                    VARIABLE.wasUsedInThisVisit = false;
                 }
                 //instancePlanet.lastVisitedTime++;
             }
@@ -99,6 +99,17 @@ public class MovementAroundPlanet : MonoBehaviour
                 temp.GetComponentInChildren<Root>().planetWhereIsPlanted = curr;
                 temp.GetComponentInChildren<Root>().setHeights();
                 curr.Roots.Add(temp.GetComponentInChildren<Root>());
+                foreach (var instancePlanet in PlanetsManager.Instance.planets)
+                {
+                    if (instancePlanet != curr)
+                    {
+                        foreach (var VARIABLE in instancePlanet.Roots)
+                        {
+                            VARIABLE.Decrease();
+                        }
+                        //instancePlanet.lastVisitedTime++;
+                    }
+                }
             }
         }
     }
