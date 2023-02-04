@@ -18,6 +18,7 @@ public class MovementAroundPlanet : MonoBehaviour
     private void Start()
     {
         player = ReInput.players.GetPlayer(0);
+        player.controllers.maps.SetMapsEnabled(false, RewiredConsts.Category.OnPlanet);
         OnLand(firstPlanet);
     }
 
