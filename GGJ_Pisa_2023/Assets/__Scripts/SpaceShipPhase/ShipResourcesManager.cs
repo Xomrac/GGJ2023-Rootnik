@@ -16,16 +16,20 @@ public class ShipResourcesManager : MonoBehaviour
 {
 
 	[BoxGroup("Resources Amount")] [HorizontalGroup("Resources Amount/Levels")] [LabelText("Food")] [LabelWidth(40)] [SerializeField]
-	private float foodLevel;
-	public float FoodLevel => foodLevel;
-	[HorizontalGroup("Resources Amount/Levels")] [LabelText("Water")] [LabelWidth(40)] [SerializeField]
+	[ReadOnly]private float foodLevel;
+	[ReadOnly][HorizontalGroup("Resources Amount/Levels")] [LabelText("Water")] [LabelWidth(40)] [SerializeField]
 	private float waterLevel;
-	public float WaterLevel => waterLevel;
-	[HorizontalGroup("Resources Amount/Levels")] [LabelText("Oxygen")] [LabelWidth(50)] [SerializeField]
+	[ReadOnly][HorizontalGroup("Resources Amount/Levels")] [LabelText("Oxygen")] [LabelWidth(50)] [SerializeField]
 	private float oxygenLevel;
-	public float OxygenLevel => oxygenLevel;
 
 	public static Action oxygenFinished;
+
+	private void Update()
+	{
+		foodLevel = PlayerResources.currentFood;
+		waterLevel = PlayerResources.currentWater;
+		oxygenLevel = PlayerResources.currentOxygen;
+	}
 
 	private void OnEnable()
 	{
@@ -49,7 +53,7 @@ public class ShipResourcesManager : MonoBehaviour
 
 		IEnumerator ConsumeCoroutine()
 		{
-			oxygenLevel -= consume;
+			PlayerResources.currentOxygen -= consume;
 			if (oxygenLevel < 0)
 			{
 				oxygenFinished?.Invoke();
@@ -73,14 +77,14 @@ public void StartConsume(ResourceType resourceType, float consume)
 		switch (resourceType)
 		{
 			case ResourceType.Food:
-				foodLevel -= consume;
+				PlayerResources.currentFood -= consume;
 				if (foodLevel < 0)
 				{
 					foodLevel = 0;
 				}
 				break;
 			case ResourceType.Water:
-				waterLevel -= consume;
+				PlayerResources.currentWater -= consume;
 				if (waterLevel < 0)
 				{
 					waterLevel = 0;
