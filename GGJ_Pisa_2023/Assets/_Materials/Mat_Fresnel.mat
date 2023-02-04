@@ -47,7 +47,8 @@ Material:
     - _StepPower: 0.5
     - _Time: 1.21
     - _TimePower: 0.05
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8664200218319739420
 MonoBehaviour:
