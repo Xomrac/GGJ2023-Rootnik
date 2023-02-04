@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d1618-3bdb-4e93-a837-8a8f1eaf0778" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Montserrat-ExtraLightItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Montserrat-ExtraLightItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Montserrat-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Montserrat-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Models/Animazioni/Animazione Idle/idle_fred.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Models/Animazioni/Animazione Idle/idle_fred.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/LevelSelectionCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/LevelSelectionCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/CameraManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/LevelSelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/LevelSelectionManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +16,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/6a/31866c99/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/b0/d480df68/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/EnanchedEditor/Scripts/SceneSwitcher/Editor/SceneSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RadialMenuController.cs" root0="FORCE_HIGHLIGHTING" />
