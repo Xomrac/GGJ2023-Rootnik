@@ -42,6 +42,10 @@ public class MovementAroundPlanet : MonoBehaviour
         {
             if (instancePlanet != planet)
             {
+                foreach (var VARIABLE in instancePlanet.Roots)
+                {
+                    VARIABLE.wasUsedInThisVisit = false;
+                }
                 //instancePlanet.lastVisitedTime++;
             }
         }
@@ -91,9 +95,21 @@ public class MovementAroundPlanet : MonoBehaviour
                 var temp = Instantiate(basePrefab, piedi.position, transform.rotation);
                 temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius",
                     Vector3.Distance(piedi.position, curr.transform.position));
-                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(1));
+                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(0.4f));
                 temp.GetComponentInChildren<Root>().planetWhereIsPlanted = curr;
+                temp.GetComponentInChildren<Root>().setHeights();
                 curr.Roots.Add(temp.GetComponentInChildren<Root>());
+                foreach (var instancePlanet in PlanetsManager.Instance.planets)
+                {
+                    if (instancePlanet != curr)
+                    {
+                        foreach (var VARIABLE in instancePlanet.Roots)
+                        {
+                            VARIABLE.Decrease();
+                        }
+                        //instancePlanet.lastVisitedTime++;
+                    }
+                }
             }
         }
     }
@@ -106,8 +122,7 @@ public class MovementAroundPlanet : MonoBehaviour
             Debug.Log("plant!");
             if (!temp.wasUsedInThisVisit)
             {
-                temp.currGrowth += temp.howMuchGrows;
-                StartCoroutine(temp.RootAnimation(temp.currGrowth));
+                StartCoroutine(temp.RootAnimation(temp.currGrowth+temp.howMuchGrows));
             }
         }
     }

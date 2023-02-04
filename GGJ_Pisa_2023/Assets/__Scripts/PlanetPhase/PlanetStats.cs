@@ -29,6 +29,8 @@ public class PlanetStats: SerializedMonoBehaviour , ISavable
     public Dictionary<layers, PondMinAndObjects> pondsValue;
     public Dictionary<layers, int> gainValue;
     public List<Root> Roots;
+    public float radiusLenght2;
+    public float radiusLenght3;
 
     //si guadagna max maggiore metà minore
     
