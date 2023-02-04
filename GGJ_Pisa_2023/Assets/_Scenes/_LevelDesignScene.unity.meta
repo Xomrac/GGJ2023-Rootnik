@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:GGJ_Pisa_2023/Assets/__Scripts/Singleton.meta
+guid: 8313f24a39202034e9be535154432ccf
+folderAsset: yes
+========
 guid: 46b1501c05480c04d94d8159483e642a
+>>>>>>>> 5cfc1d1124a54b2a80f83a3fa2bee4a92d8bcfae:GGJ_Pisa_2023/Assets/_Scenes/_LevelDesignScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

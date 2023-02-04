@@ -10,10 +10,11 @@ public class MovementAroundPlanet : MonoBehaviour
 {
     private float radius;
     public float vel;
-    public Vector3 currCenterPlanet;
+    private Vector3 currCenterPlanet;
     private Player player;
-    [Range(0, 6.28f)] public float angle;
-    public GameObject firstPlanet;
+    [Range(0, 6.28f)] private float angle;
+    public PlanetStats firstPlanet;
+    public PlanetStats second;
 
     private void Start()
     {
@@ -22,12 +23,21 @@ public class MovementAroundPlanet : MonoBehaviour
         OnLand(firstPlanet);
     }
 
-    private void OnLand(GameObject planet)
+    private void OnLand(PlanetStats planet)
     {
+        transform.position =new Vector3(planet.landingPoint.position.x,planet.landingPoint.position.y+(GetComponent<Collider>().bounds.extents.y*3),planet.landingPoint.position.z);
         currCenterPlanet = planet.transform.position;
         player.controllers.maps.SetMapsEnabled(true, RewiredConsts.Category.OnPlanet);
-        radius= Vector3.Distance(transform.position, planet.transform.position);
+        radius= Vector3.Distance(transform.position, planet.gameObject.transform.position);
+        planet.lastVisitedTime = 0;
         Debug.DrawLine(transform.position, currCenterPlanet, Color.red, 10f);
+        foreach (var instancePlanet in PlanetsManager.Instance.planets)
+        {
+            if (instancePlanet!=planet)
+            {
+                instancePlanet.lastVisitedTime++;
+            }
+        }
     }
 
     public void Move()
@@ -45,6 +55,14 @@ public class MovementAroundPlanet : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnLand(second);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            OnLand(firstPlanet);
+        }
         if (player.GetAxis(RewiredConsts.Action.Move) != 0)
         {
            Move();
