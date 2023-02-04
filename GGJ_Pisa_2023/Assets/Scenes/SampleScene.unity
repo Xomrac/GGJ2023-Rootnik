@@ -688,6 +688,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649691564680993476, guid: fecd22c89e3ed1f48bc1976a963c86de,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1e87f9924ace4b4c8c365c845547f90, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fecd22c89e3ed1f48bc1976a963c86de, type: 3}
 --- !u!1001 &5441658180331228095
@@ -772,6 +777,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2039582155275377945, guid: b7fda56aafc8be5488631ef29acff154,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63ad8bbc8def2fb438fc7685f0239def, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7fda56aafc8be5488631ef29acff154, type: 3}
 --- !u!1001 &6063125099367290582
@@ -841,6 +851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetLayer2
       objectReference: {fileID: 0}
+    - target: {fileID: 1295195629482539853, guid: 6dfabeb2fef51b4439978af87fd04703,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab5acebd76ac1804985bf84c3be0b6db, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dfabeb2fef51b4439978af87fd04703, type: 3}
 --- !u!1001 &7621162842877852569
@@ -868,7 +883,7 @@ PrefabInstance:
     - target: {fileID: 9060151236740378333, guid: 056b904c0d4f00d4195ab6f96fc2c5f3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 239
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 9060151236740378333, guid: 056b904c0d4f00d4195ab6f96fc2c5f3,
         type: 3}
