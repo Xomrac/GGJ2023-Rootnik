@@ -463,9 +463,6 @@ MonoBehaviour:
   foodLevel: 100
   waterLevel: 100
   oxygenLevel: 100
-  foodDepletionRate: 0.2
-  waterDepletionRate: 0.01
-  oxygenDepletionRate: 0.03
 --- !u!4 &221403033
 Transform:
   m_ObjectHideFlags: 0
@@ -1325,6 +1322,44 @@ PrefabInstance:
     - target: {fileID: 3801828429297640233, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"consumes","value":{"$id":0,"$type":"System.Collections.Generic.Dictionary`2[[ResourceType,
+        Assembly-CSharp],[System.Single, mscorlib]], mscorlib","comparer":{"$id":1,"$type":"System.Collections.Generic.EnumEqualityComparer`1[[ResourceType,
+        Assembly-CSharp]], mscorlib","$rlength":0,"$rcontent":[]},"$rlength":3,"$rcontent":[{"$k":0,"$v":0.02},{"$k":1,"$v":0.002},{"$k":2,"$v":1}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"consumes.{0es}","value":{"$id":0,"$type":"System.Single, mscorlib",0.02}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
+      value: '"path":"consumes.{1es}","value":{"$id":0,"$type":"System.Single, mscorlib",0.002}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      value: '"path":"consumes.{2es}","value":{"$id":0,"$type":"System.Single, mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801828429297640234, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
+        type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3801828429297640236, guid: d9e7c82dfdc18bc42a2a5c375738ad5b,
