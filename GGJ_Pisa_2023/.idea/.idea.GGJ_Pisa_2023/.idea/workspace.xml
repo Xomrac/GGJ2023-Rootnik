@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d1618-3bdb-4e93-a837-8a8f1eaf0778" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/CameraManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/CameraManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/LevelSelectionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/LevelSelectionManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/PlanetInfoDisplayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/PlanetInfoDisplayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/PlayerTeleportController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/PlayerTeleportController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/SpaceshipCockpit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/SpaceshipCockpit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/Teleporter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/Teleporter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Pipe.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Pipe.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Plant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Plant.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/RadialMenuCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/RadialMenuCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Rendering/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rendering/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_LevelDesignScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_LevelDesignScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_RadialMenuTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_RadialMenuTest.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_TestTopdown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_TestTopdown.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/General/FadeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/General/FadeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/SelectablePlanet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/SelectablePlanet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/Singleton.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/Singleton.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/ShipResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/ShipResourcesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ConsolePro/Remote/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Examples.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/PlaymakerActions.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/TMPro.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Graphy - Ultimate Stats Monitor/Graphy_CustomizationScene.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Roots 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Roots 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_Rotation around planet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_Rotation around planet.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +24,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/6a/31866c99/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/b0/d480df68/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/EnanchedEditor/Scripts/SceneSwitcher/Editor/SceneSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RadialMenuController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TravelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetRankData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/PlanetsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/__Scripts/Save/SaveAndLoad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/__Scripts/SpaceShipPhase/SelectablePlanet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
