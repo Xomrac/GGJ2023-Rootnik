@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d1618-3bdb-4e93-a837-8a8f1eaf0778" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

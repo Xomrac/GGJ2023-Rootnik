@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Jam;
 using UnityEngine;
 
 
@@ -31,8 +32,17 @@ public class Root : MonoBehaviour
         }
         else
         {
-            Debug.Log(planetWhereIsPlanted.gainValue[layer]);
-            
+            if (planetWhereIsPlanted.Roots.IndexOf(this)!=0)
+            {
+                PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer]/2f;
+                Debug.Log(PlayerResources.currentFood+" half");
+            }
+            else
+            {
+                PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer];
+                Debug.Log(PlayerResources.currentFood);
+            }
+
         }
     }
 
