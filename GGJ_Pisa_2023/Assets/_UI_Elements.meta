@@ -1,6 +1,10 @@
 fileFormatVersion: 2
-guid: f71c5f8c0f9949443ba27e5191fe8994
+<<<<<<<< HEAD:GGJ_Pisa_2023/Assets/Plugins/ConsolePro/Remote/LiteNetLib/LiteNetLib.csproj.meta
+guid: 36ae2e48e7a7343fcb1503f56b5d4485
+========
+guid: 0d606dd9990abf04db5fd70eb03972f5
 folderAsset: yes
+>>>>>>>> origin/main:GGJ_Pisa_2023/Assets/_UI_Elements.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
