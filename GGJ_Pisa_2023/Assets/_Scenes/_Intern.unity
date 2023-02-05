@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.6553888, g: 1.1385179, b: 0.56635535, a: 1}
+  m_IndirectSpecularColor: {r: 1.880735, g: 1.0429871, b: 0.5066601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1081,6 +1081,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4800844370659720236, guid: 288d10675dbc8334e9437e639630bbee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.27863944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800844370659720236, guid: 288d10675dbc8334e9437e639630bbee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.27863944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800844370659720236, guid: 288d10675dbc8334e9437e639630bbee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.27863944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800844370659720236, guid: 288d10675dbc8334e9437e639630bbee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800844370659720236, guid: 288d10675dbc8334e9437e639630bbee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800844370659720236, guid: 288d10675dbc8334e9437e639630bbee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7457616205365918706, guid: 288d10675dbc8334e9437e639630bbee,
         type: 3}
       propertyPath: m_RootOrder
@@ -3209,6 +3239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 851069219487052602}
+  startBodyVector3: {x: 0, y: 0, z: 0}
+  levelSelectionBodyValue: {x: 0, y: 0, z: 0}
   player: {fileID: 851069220306394431}
 --- !u!1 &851069219502375266
 GameObject:
@@ -4169,7 +4201,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -4226,6 +4258,7 @@ GameObject:
   - component: {fileID: 851069220754911776}
   - component: {fileID: 851069220754911779}
   - component: {fileID: 851069220754911780}
+  - component: {fileID: 851069220754911808}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4233,6 +4266,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &851069220754911808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851069220754911807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: ba086039797435347963e07a8fbef697, type: 2}
 --- !u!1 &851069220811093290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,7 +4662,7 @@ PrefabInstance:
     - target: {fileID: 8162082168615812670, guid: eb2a33bc4714e144eb7d0ff5180b5d0d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.63
+      value: -8.52
       objectReference: {fileID: 0}
     - target: {fileID: 8162082168615812670, guid: eb2a33bc4714e144eb7d0ff5180b5d0d,
         type: 3}
