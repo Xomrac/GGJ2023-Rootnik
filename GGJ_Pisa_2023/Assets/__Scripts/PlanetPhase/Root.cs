@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Jam;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class Root : MonoBehaviour
@@ -14,15 +15,14 @@ public class Root : MonoBehaviour
     public float howMuchDecres;
     public float currGrowth;
     public float maxRadius;
-    public float HeightForLayer2;
     public float HeightForLayer3;
+    public float HeightForLayer2;
 
     public void setHeights()
     {
-        HeightForLayer2 =  planetWhereIsPlanted.radiusLenght3-maxRadius;
-        HeightForLayer3 = planetWhereIsPlanted.radiusLenght2-maxRadius;
+        HeightForLayer2 =  maxRadius-planetWhereIsPlanted.radiusLenght3;
+        HeightForLayer3 =maxRadius-planetWhereIsPlanted.radiusLenght2;
     }
-
     public void CollectResource()
     {
         wasUsedInThisVisit = true;
@@ -72,18 +72,23 @@ public class Root : MonoBehaviour
             GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", val);
             yield return null;
         }
+        GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", howMuchToGrow);
         currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
+        Debug.Log("curr"+currGrowth);
+        Debug.Log("3"+HeightForLayer3);
+        Debug.Log("2"+HeightForLayer2);
         if (currGrowth>HeightForLayer2)
         {
+            Debug.Log("layer2");
             layer = layers.Layer2;
-        }
 
-        if (currGrowth>HeightForLayer3)
+        }else if (currGrowth>HeightForLayer3)
         {
+            Debug.Log("layer3");
             layer = layers.Layer3;
-
         }
-        maxRadius= GetComponentInChildren<MeshRenderer>().material.GetFloat("_Radius");
+
+      
         CollectResource();
     }
 }

@@ -54,13 +54,12 @@ public class MovementAroundPlanet : MonoBehaviour
     public void Move()
     {
         Vector3 newPos;
-        angle += vel * player.GetAxis(RewiredConsts.Action.Move) * Time.deltaTime;
+        angle += vel * player.GetAxis(RewiredConsts.Action.Move)*-1 * Time.deltaTime;
         float angledegrees = angle * Mathf.Rad2Deg;
-        newPos.x = transform.position.x;
+        newPos.x = currCenterPlanet.x + (radius * math.sin(angle));
         newPos.y = currCenterPlanet.y + (radius * math.cos(angle));
-        newPos.z = currCenterPlanet.z + (radius * math.sin(angle));
-        Quaternion rot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y,
-            -angledegrees);
+        newPos.z = transform.position.z;
+        Quaternion rot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y,-angledegrees);
         transform.position = newPos;
         transform.rotation = rot;
     }
@@ -92,10 +91,11 @@ public class MovementAroundPlanet : MonoBehaviour
             if (curr.Roots.Count <= 2)
             {
                 animator.SetTrigger("Plant");
-                var temp = Instantiate(basePrefab, piedi.position, transform.rotation);
-                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius",
-                    Vector3.Distance(piedi.position, curr.transform.position));
-                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(0.4f));
+                var temp = Instantiate(basePrefab,new Vector3(piedi.position.x,piedi.position.y,piedi.position.z+20f), transform.rotation);
+                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius", radius-(GetComponent<Collider>().bounds.extents.y ));
+                temp.GetComponentInChildren<Root>().maxRadius =
+                    Vector3.Distance(piedi.position, curr.transform.position);
+                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(40));
                 temp.GetComponentInChildren<Root>().planetWhereIsPlanted = curr;
                 temp.GetComponentInChildren<Root>().setHeights();
                 curr.Roots.Add(temp.GetComponentInChildren<Root>());
@@ -122,7 +122,7 @@ public class MovementAroundPlanet : MonoBehaviour
             Debug.Log("plant!");
             if (!temp.wasUsedInThisVisit)
             {
-                StartCoroutine(temp.RootAnimation(temp.currGrowth+temp.howMuchGrows));
+                StartCoroutine(temp.RootAnimation(Mathf.Clamp(temp.currGrowth+temp.howMuchGrows,0,temp.maxRadius)));
             }
         }
     }
