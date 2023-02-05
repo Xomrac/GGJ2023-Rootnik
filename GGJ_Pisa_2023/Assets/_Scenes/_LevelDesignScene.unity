@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.4067285, g: 0.7800358, b: 0.37894413, a: 1}
+  m_IndirectSpecularColor: {r: 1.4067274, g: 0.7800385, b: 0.3789426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1829,6 +1829,91 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 73
       objectReference: {fileID: 0}
+    - target: {fileID: 3237917458996898603, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459039816566, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459143174680, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459267350709, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459338224329, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459453589041, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459483388325, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459582247445, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917459773440873, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460095535346, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460366970867, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460389309011, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460534122455, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460590043719, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460597586718, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460608535984, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237917460735258793, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486573, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: m_Name
@@ -2261,6 +2346,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 518029535}
+    - target: {fileID: 9204790886268937230, guid: d6239bc1d7564534fab9dd42e19aabbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9204790887115312342, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: m_Mesh
@@ -3686,13 +3776,14 @@ MonoBehaviour:
       Entry: 8
       Data: 
   lastVisitedTime: 0
-  rootsPlanted: 0
   maxReached: 0
   UID: cced0f7d187517443819df89f66fb0e3
   landingPoint: {fileID: 0}
   Roots: []
   radiusLenght2: 0
   radiusLenght3: 0
+  radiusnucleo: 0
+  wasVisited: 0
 --- !u!4 &1180584279
 Transform:
   m_ObjectHideFlags: 0
