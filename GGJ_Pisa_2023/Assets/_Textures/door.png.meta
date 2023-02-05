@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:GGJ_Pisa_2023/Assets/_Textures/door.png.meta
 guid: 2fdfa6e9530f148468bf0cee0b0d1a7b
+========
+guid: 1e359492472472f4e8ed3986b68ed300
+>>>>>>>> 7c6f3882a82354ecf11f13aa935d9d40880fd71f:GGJ_Pisa_2023/Assets/_Models/Animazioni/idle export/FRED.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
