@@ -79,8 +79,38 @@ public class Root : MonoBehaviour
                 }
             }
         }
+        collectFromPond();
     }
-    
+
+    public void collectFromPond()
+    {
+        
+        for(var i = poolInRange.Count - 1; i > -1; i--)
+        {
+            if (poolInRange[i] == null)
+                poolInRange.RemoveAt(i);
+        }
+        foreach (var pond in poolInRange)
+        {
+            
+            if (planetWhereIsPlanted.pondsValue[layers.Layer1].pondsObj.Contains(pond))
+            {
+                PlayerResources.currentWater+=planetWhereIsPlanted.gainValue[layers.Layer1];
+            }
+
+            if (planetWhereIsPlanted.pondsValue[layers.Layer2].pondsObj.Contains(pond))
+            {
+                PlayerResources.currentWater+=planetWhereIsPlanted.gainValue[layers.Layer2];
+            }
+            if (planetWhereIsPlanted.pondsValue[layers.Layer3].pondsObj.Contains(pond))
+            {
+                PlayerResources.currentWater+=planetWhereIsPlanted.gainValue[layers.Layer3];
+            }
+            var temp = pond.GetComponent<Pond>();
+            temp.numberOfTimeUsed++;
+            temp.checkIfEmpty();
+        }
+    }
     public void Decrease()
     {
         if (currGrowth - howMuchDecres <= 0)
@@ -99,16 +129,18 @@ public class Root : MonoBehaviour
         }
 
         CheckInWichLayer();
-        GetComponent<BoxCollider>().size = new Vector3(GetComponent<BoxCollider>().size.x, (currGrowth * 46) / 100,
+        GetComponent<BoxCollider>().size = new Vector3(GetComponent<BoxCollider>().size.x, (currGrowth * 39) / 100,
             GetComponent<BoxCollider>().size.z);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.CompareTag("Pond"))
         {
             poolInRange.Add(other.gameObject);
+            other.GetComponent<Pond>().TRoot = this;
         }
     }
 
@@ -117,6 +149,7 @@ public class Root : MonoBehaviour
         if (other.CompareTag("Pond"))
         {
             poolInRange.Remove(other.gameObject);
+            other.GetComponent<Pond>().TRoot = null;
         }
     }
 
@@ -132,13 +165,12 @@ public class Root : MonoBehaviour
             val = Mathf.Lerp(dioMaiale, howMuchToGrow, elapsedTime / timeAnim);
             GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", val);
             currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
+            GetComponent<BoxCollider>().size = new Vector3(GetComponent<BoxCollider>().size.x, (currGrowth * 39) / 100, GetComponent<BoxCollider>().size.z);
             yield return null;
         }
-
         currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
         CheckInWichLayer();
         CollectResource();
-        GetComponent<BoxCollider>().size = new Vector3(GetComponent<BoxCollider>().size.x, (currGrowth * 46) / 100, GetComponent<BoxCollider>().size.z);
     }
 
     public void CheckInWichLayer()
