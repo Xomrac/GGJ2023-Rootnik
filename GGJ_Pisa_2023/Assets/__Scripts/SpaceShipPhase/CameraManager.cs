@@ -13,6 +13,8 @@ namespace Jam
 		[SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 		[SerializeField] private Vector3 startBodyVector3;
 		[SerializeField] private Vector3 levelSelectionBodyValue;
+		[SerializeField] private Vector3 startRot;
+		[SerializeField] private Vector3 mapRot;
 
 		[SerializeField] private TopdownController player;
 
@@ -31,16 +33,19 @@ namespace Jam
 		private void Start()
 		{
 			startBodyVector3 = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset;
+			startRot = cinemachineVirtualCamera.transform.eulerAngles;
 		}
 		
 		public void ChangeOffsetToMap()
 		{
 			cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = levelSelectionBodyValue;
+			cinemachineVirtualCamera.transform.eulerAngles = mapRot;
 		}
 
 		public void ChangeoffsetToPlayer()
 		{
 			cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = startBodyVector3;
+			cinemachineVirtualCamera.transform.eulerAngles = startRot;
 		}
 			
 
