@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FresnelPower: -0.31
-    - _NoiseScale: 408
+    - _NoiseScale: 310.1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Range: 0.7
