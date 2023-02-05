@@ -9,6 +9,6 @@ public class PlanetsManager : Singleton<PlanetsManager>
 
    private void Start()
    {
-    planets=FindObjectsOfType<PlanetStats>().ToList();
+    planets=FindObjectsOfType<PlanetStats>(true).ToList();
    }
 }
