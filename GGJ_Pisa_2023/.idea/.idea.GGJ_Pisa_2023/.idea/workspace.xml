@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124d1618-3bdb-4e93-a837-8a8f1eaf0778" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ_Pisa_2023/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Animations/Pg/Pg.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animations/Pg/Pg.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Mat_Fresnel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Mat_Fresnel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Mat_PlanetLayer1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Mat_PlanetLayer1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Mat_PlanetLayer2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Mat_PlanetLayer2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Roots 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Roots 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Plant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Plant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_LevelDesignScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_LevelDesignScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_Rotation around planet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_Rotation around planet.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Shaders/Root 1.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Shaders/Root 1.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/MovementAroundPlanet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/__Scripts/PlanetPhase/Root.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4014a86cbefb4944b2b6c9211c8fd2fc159a00/2b/b8c06522/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/EnanchedEditor/Scripts/SceneSwitcher/Editor/SceneSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RadialMenuController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -30,23 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Bobbi\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Bobbi\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Bobbi\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\miche\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\miche\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\miche\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe" />
@@ -95,6 +108,7 @@
       <updated>1675368804804</updated>
       <workItem from="1675368812027" duration="761000" />
       <workItem from="1675500000705" duration="2290000" />
+      <workItem from="1675550522016" duration="5255000" />
     </task>
     <servers />
   </component>
