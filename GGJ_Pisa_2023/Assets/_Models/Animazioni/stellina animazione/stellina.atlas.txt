@@ -1,0 +1,6 @@
+stellina.png
+size:776,991
+filter:Linear,Linear
+pma:true
+Livello 1
+bounds:2,2,772,987

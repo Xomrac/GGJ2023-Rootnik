@@ -1,0 +1,6 @@
+navicella.png
+size:1234,1273
+filter:Linear,Linear
+pma:true
+Livello 3 copia
+bounds:2,2,1230,1269
