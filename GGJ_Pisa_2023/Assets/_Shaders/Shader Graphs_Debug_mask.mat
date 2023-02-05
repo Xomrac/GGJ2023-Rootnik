@@ -7,12 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Fresnel
-  m_Shader: {fileID: -6465566751694194690, guid: 83ca0552565e8f54b9ab04c42f4d13de,
+  m_Name: Shader Graphs_Debug_mask
+  m_Shader: {fileID: -6465566751694194690, guid: 9232c944a14330040b89bb78637ec837,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -21,10 +21,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2b15961abed66684db7795412d99172f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -39,18 +35,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 0.05
-    - _NoiseScale: 64.17
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Range: 0.79
-    - _StepPower: 0.19
-    - _Time: 1.21
-    - _TimePower: 0.05
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _MaskMinMax: {r: -0.24, g: 0.51, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8664200218319739420
+--- !u!114 &2966652727987658169
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

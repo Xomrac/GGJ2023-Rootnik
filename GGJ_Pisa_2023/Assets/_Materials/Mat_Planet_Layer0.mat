@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Fresnel
+  m_Name: Mat_Planet_Layer0
   m_Shader: {fileID: -6465566751694194690, guid: 83ca0552565e8f54b9ab04c42f4d13de,
     type: 3}
   m_ValidKeywords: []
@@ -39,18 +39,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 0.05
-    - _NoiseScale: 64.17
+    - _FresnelPower: -0.31
+    - _NoiseScale: 607.07
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Range: 0.79
-    - _StepPower: 0.19
+    - _Range: 0.7
+    - _StepPower: 1.81
     - _Time: 1.21
     - _TimePower: 0.05
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _MaskMinMax: {r: 1.6, g: -0.73, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8664200218319739420
+--- !u!114 &1862911317255643468
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
