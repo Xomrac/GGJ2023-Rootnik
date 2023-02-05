@@ -92,9 +92,10 @@ public class MovementAroundPlanet : MonoBehaviour
             {
                 animator.SetTrigger("Plant");
                 var temp = Instantiate(basePrefab,new Vector3(piedi.position.x,piedi.position.y,piedi.position.z+20f), transform.rotation);
+                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", 0);
+                temp.GetComponentInChildren<Root>().wasUsedInThisVisit = true;
                 temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius", radius-(GetComponent<Collider>().bounds.extents.y ));
-                temp.GetComponentInChildren<Root>().maxRadius =
-                    Vector3.Distance(piedi.position, curr.transform.position);
+                temp.GetComponentInChildren<Root>().maxRadius = Vector3.Distance(piedi.position, curr.transform.position);
                 StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(40));
                 temp.GetComponentInChildren<Root>().planetWhereIsPlanted = curr;
                 temp.GetComponentInChildren<Root>().setHeights();
