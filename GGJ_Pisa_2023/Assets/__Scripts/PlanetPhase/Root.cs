@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Jam;
 using Sirenix.OdinInspector;
 using UnityEditor.ShaderGraph.Internal;
@@ -14,30 +15,19 @@ public class Root : MonoBehaviour
     public float GainDecreseAfterNucleo;
     public float GainIncreaseAfterNucleoRecover;
     public float timeAnim;
-    [FoldoutGroup("don't touch")]
-    public bool wasUsedInThisVisit = false;
-    [FoldoutGroup("don't touch")]
-    public PlanetStats planetWhereIsPlanted;
-    [FoldoutGroup("don't touch")]
-    public layers layer = layers.Layer1;
-    [FoldoutGroup("don't touch")]
-    public float currGrowth;
-    [FoldoutGroup("don't touch")]
-    public float maxRadius;
-    [FoldoutGroup("don't touch")]
-    public float HeightForLayer3;
-    [FoldoutGroup("don't touch")]
-    public float HeightForLayer2;
-    [FoldoutGroup("don't touch")]
-    public float HeightFornucleo;
-    [FoldoutGroup("don't touch")]
-    public float MaxGain;
-    [FoldoutGroup("don't touch")]
-    public float currGain;
-    [FoldoutGroup("don't touch")]
-    public bool NucleoTouched;
+    [FoldoutGroup("don't touch")] public bool wasUsedInThisVisit = false;
+    [FoldoutGroup("don't touch")] public PlanetStats planetWhereIsPlanted;
+    [FoldoutGroup("don't touch")] public layers layer = layers.Layer1;
+    [FoldoutGroup("don't touch")] public float currGrowth;
+    [FoldoutGroup("don't touch")] public float maxRadius;
+    [FoldoutGroup("don't touch")] public float HeightForLayer3;
+    [FoldoutGroup("don't touch")] public float HeightForLayer2;
+    [FoldoutGroup("don't touch")] public float HeightFornucleo;
+    [FoldoutGroup("don't touch")] public float MaxGain;
+    [FoldoutGroup("don't touch")] public float currGain;
+    [FoldoutGroup("don't touch")] public bool NucleoTouched;
 
-    private RaycastHit[] hits;
+    public List<GameObject> poolInRange;
 
     public void setHeights()
     {
@@ -49,11 +39,11 @@ public class Root : MonoBehaviour
     public void CollectResource()
     {
         wasUsedInThisVisit = true;
-       if (layer==layers.nucleo)
+        if (layer == layers.nucleo)
         {
             if (NucleoTouched)
             {
-              currGain= Mathf.Clamp(currGain -GainDecreseAfterNucleo,0 ,MaxGain);
+                currGain = Mathf.Clamp(currGain - GainDecreseAfterNucleo, 0, MaxGain);
             }
             else
             {
@@ -61,6 +51,7 @@ public class Root : MonoBehaviour
                 currGain = MaxGain;
                 NucleoTouched = true;
             }
+
             PlayerResources.currentFood += currGain;
         }
         else
@@ -74,7 +65,7 @@ public class Root : MonoBehaviour
                 else
                 {
                     PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer];
-                } 
+                }
             }
             else
             {
@@ -85,18 +76,11 @@ public class Root : MonoBehaviour
                 else
                 {
                     PlayerResources.currentFood += currGain;
-                } 
-
+                }
             }
-            
         }
     }
-
-    private void Update()
-    {
-        NumberOfLakes();
-    }
-
+    
     public void Decrease()
     {
         if (currGrowth - howMuchDecres <= 0)
@@ -107,25 +91,40 @@ public class Root : MonoBehaviour
         {
             if (NucleoTouched)
             {
-                currGain= Mathf.Clamp(currGain+GainIncreaseAfterNucleoRecover,0 ,MaxGain);
-  
+                currGain = Mathf.Clamp(currGain + GainIncreaseAfterNucleoRecover, 0, MaxGain);
             }
+
             currGrowth -= howMuchDecres;
             GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", currGrowth);
         }
+
         CheckInWichLayer();
+        GetComponent<BoxCollider>().size = new Vector3(GetComponent<BoxCollider>().size.x, (currGrowth * 46) / 100,
+            GetComponent<BoxCollider>().size.z);
     }
 
-    public void NumberOfLakes()
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Pond"))
+        {
+            poolInRange.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Pond"))
+        {
+            poolInRange.Remove(other.gameObject);
+        }
     }
 
     public IEnumerator RootAnimation(float howMuchToGrow)
     {
         float elapsedTime = 0;
         float val = 0;
-        float dioMaiale=GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
+        float dioMaiale = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
 
         while (elapsedTime < timeAnim)
         {
@@ -137,11 +136,9 @@ public class Root : MonoBehaviour
         }
 
         currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
-        GetComponent<BoxCollider>().size=new Vector3( GetComponent<BoxCollider>().size.x, , GetComponent<BoxCollider>().size.z)
-       
-
-CheckInWichLayer();
+        CheckInWichLayer();
         CollectResource();
+        GetComponent<BoxCollider>().size = new Vector3(GetComponent<BoxCollider>().size.x, (currGrowth * 46) / 100, GetComponent<BoxCollider>().size.z);
     }
 
     public void CheckInWichLayer()
@@ -150,12 +147,13 @@ CheckInWichLayer();
         {
             layer = layers.Layer2;
         }
+
         if (currGrowth > HeightForLayer3)
         {
             layer = layers.Layer3;
         }
 
-        if (currGrowth>HeightFornucleo)
+        if (currGrowth > HeightFornucleo)
         {
             layer = layers.nucleo;
         }
