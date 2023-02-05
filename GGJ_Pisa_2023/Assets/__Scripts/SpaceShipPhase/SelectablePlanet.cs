@@ -7,18 +7,24 @@ using UnityEngine;
 
 public enum Fertility
 {
-
+    Fertile,
+    NotSoFertile,
+    Barren,
+    Unfertile
 }
 public class SelectablePlanet : MonoBehaviour
 {
-    [SerializeField] private string displayName;
-    [SerializeField] private float distance;
+    [SerializeField] public string displayName;
+    [SerializeField] public float distance;
     [ReadOnly][SerializeField] private float lastVisitTime;
     [SerializeField] private string coordinates;
-    [SerializeField] private Fertility planetFertility;
+    [SerializeField] public Fertility planetFertility;
     [SerializeField] private float timeToReach;
     public float TimeToReach => timeToReach;
-
+    public GameObject rootFeedback;
+    public SpriteRenderer spriteRenderer;
+    public SpriteRenderer misterySprite;
+    public int index;
     [SerializeField] private Sprite planetIcon;
     [SerializeField] public Transform focusPoint;
 

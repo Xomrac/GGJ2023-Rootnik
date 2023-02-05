@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.6553888, g: 1.1385179, b: 0.56635535, a: 1}
+  m_IndirectSpecularColor: {r: 1.4067274, g: 0.7800385, b: 0.3789426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -569,6 +569,8 @@ MonoBehaviour:
   foodLevel: 100
   waterLevel: 100
   oxygenLevel: 100
+  plants: []
+  currentInteractionPoint: {fileID: 0}
 --- !u!4 &221403033
 Transform:
   m_ObjectHideFlags: 0
@@ -2432,8 +2434,8 @@ Transform:
   - {fileID: 1061624277}
   - {fileID: 195714993}
   - {fileID: 891075389187841613}
-  - {fileID: 552607811}
   - {fileID: 1250958384900256204}
+  - {fileID: 552607811}
   m_Father: {fileID: 359302164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2822,6 +2824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 1672960170}
+  startBodyVector3: {x: 0, y: 0, z: 0}
+  levelSelectionBodyValue: {x: 0, y: 0, z: 0}
+  startRot: {x: 0, y: 0, z: 0}
+  mapRot: {x: 0, y: 0, z: 0}
   player: {fileID: 316520111}
 --- !u!1001 &1706858761
 PrefabInstance:
@@ -4354,75 +4360,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f61ecf89c2a4a1040914e71755fe3108, type: 3}
---- !u!1001 &5199604392150726517
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -25.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 30.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773580974408856504, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5438937407066325735, guid: 3fa3606f14a66ea4d872a6cf0b4eda57,
-        type: 3}
-      propertyPath: m_Name
-      value: Plane
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fa3606f14a66ea4d872a6cf0b4eda57, type: 3}
 --- !u!224 &7515774266020096425 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7587818914358785387, guid: 71b56b09e922f1a448ce8dd697d47c28,

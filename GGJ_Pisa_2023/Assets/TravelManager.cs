@@ -10,6 +10,7 @@ public class TravelManager : Singleton<TravelManager>
    [ReadOnly] [SerializeField] private float timeToTravel;
    [ReadOnly] [SerializeField] private float currentTravelTime;
    [ReadOnly] [SerializeField] private float oxygenConsume;
+   public int planetChosen;
    [ReadOnly] private bool travelling;
    public float RemainingTimePercentage => (currentTravelTime*100)/timeToTravel;
 

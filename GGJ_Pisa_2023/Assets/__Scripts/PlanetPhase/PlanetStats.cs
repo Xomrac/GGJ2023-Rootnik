@@ -9,7 +9,8 @@ public enum layers
 {
     Layer1,
     Layer2,
-    Layer3
+    Layer3,
+    nucleo
     
 }
 public struct PondMinAndObjects
@@ -21,16 +22,26 @@ public struct PondMinAndObjects
 [Serializable]
 public class PlanetStats: SerializedMonoBehaviour , ISavable
 {
+    public Fertility fert;
+    [FoldoutGroup("don't touch")]
     public float lastVisitedTime;
-    public int rootsPlanted;
+    [FoldoutGroup("don't touch")]
     public layers maxReached;
+    [FoldoutGroup("don't touch")]
     public string UID;
     public Transform landingPoint;
     public Dictionary<layers, PondMinAndObjects> pondsValue;
     public Dictionary<layers, int> gainValue;
+    [FoldoutGroup("don't touch")]
     public List<Root> Roots;
+    [FoldoutGroup("don't touch")]
     public float radiusLenght2;
+    [FoldoutGroup("don't touch")]
     public float radiusLenght3;
+    [FoldoutGroup("don't touch")]
+    public float radiusnucleo;
+
+    public bool wasVisited;
 
     //si guadagna max maggiore metà minore
     
@@ -45,15 +56,12 @@ public class PlanetStats: SerializedMonoBehaviour , ISavable
                 if (i<layer.Value.min)
                 {
                     layer.Value.pondsObj[i].SetActive(true);
-                    Debug.Log(i);
                 }
                 else
                 {
                     float rand = Random.Range(0, 101);
-                    Debug.Log(layer.Value.pondsObj[i].name+" not spawned "+rand+" "+percent/i);
                     if (rand<percent/i)
                     {
-                        Debug.Log(layer.Value.pondsObj[i].name+" "+rand+" "+percent/i);
                         layer.Value.pondsObj[i].SetActive(true);
                     }
                

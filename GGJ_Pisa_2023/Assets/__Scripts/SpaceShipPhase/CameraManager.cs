@@ -10,50 +10,50 @@ namespace Jam
 
 	public class CameraManager : Singleton<CameraManager>
 	{
-		[SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-		[SerializeField] private Vector3 startBodyVector3;
-		[SerializeField] private Vector3 levelSelectionBodyValue;
-
-		[SerializeField] private TopdownController player;
-
-		private void OnEnable()
-		{
-			LevelSelectionManager.OnLeavingLevelSelection += FocusPlayer;
-			
-		}
-
-		private void OnDisable()
-		{
-			LevelSelectionManager.OnLeavingLevelSelection -= FocusPlayer;
-
-		}
+		[SerializeField] private CinemachineVirtualCamera camera;
+		[SerializeField] private Vector3 spaceshipBody;
+		[SerializeField] private Vector3 spaceshipRotation;
+		[SerializeField] private Vector3 levelSelectionBody;
+		[SerializeField] private Vector3 levelSelectionRotation;
+		[SerializeField] private Vector3 roamingBody;
+		[SerializeField] private Vector3 roamingRotation;
+		[SerializeField] private Transform spaceshipFocus;
+		[SerializeField] private Transform levelSelectionFocus;
+		[SerializeField] private Transform planetRoamingFocus;
+		[SerializeField] private float normalFOV;
+		[SerializeField] private float superFOV;
 
 		private void Start()
 		{
-			startBodyVector3 = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset;
-		}
-		
-		public void ChangeOffsetToMap()
-		{
-			cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = levelSelectionBodyValue;
+			setupCamera(GameState.Spaceship);
 		}
 
-		public void ChangeoffsetToPlayer()
+		public void setupCamera(GameState gameState)
 		{
-			cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = startBodyVector3;
-		}
-			
-
-		private void FocusPlayer()
-		{
-			StartCoroutine(Waiter());
-			IEnumerator Waiter()
+			switch (gameState)
 			{
-				yield return new WaitForSeconds((FadeController.Instance.HalfFadeTime));
-				cinemachineVirtualCamera.Follow = player.transform;
-				cinemachineVirtualCamera.LookAt = player.transform;
+				case GameState.Spaceship:
+					camera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = spaceshipBody;
+					camera.m_Lens.FieldOfView = normalFOV;
+					camera.Follow = spaceshipFocus;
+					camera.LookAt = spaceshipFocus;
+					camera.transform.eulerAngles = spaceshipRotation;
+					break;
+				case GameState.LevelSelection:
+					camera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = levelSelectionBody;
+					camera.Follow = levelSelectionFocus;
+					camera.m_Lens.FieldOfView = normalFOV;
+					camera.LookAt = levelSelectionFocus;
+					camera.transform.eulerAngles = levelSelectionRotation;
+					break;
+				case GameState.Roaming:
+					camera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset = roamingBody;
+					camera.Follow = planetRoamingFocus;
+					camera.m_Lens.FieldOfView = superFOV;
+					camera.LookAt = planetRoamingFocus;
+					camera.transform.eulerAngles = roamingRotation;
+					break;
 			}
-			
 		}
 	}
 

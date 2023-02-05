@@ -16,9 +16,18 @@ namespace Jam
 			if (entered) return;
 			if (other.CompareTag("Player"))
 			{
+				LevelManager.Instance.ChangeScreen(GameState.LevelSelection);
 				onEnteringPoint?.Invoke();
-				
+
 				entered = true;
+			}
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+			if (other.CompareTag("Player"))
+			{
+				entered = false;
 			}
 		}
 	}

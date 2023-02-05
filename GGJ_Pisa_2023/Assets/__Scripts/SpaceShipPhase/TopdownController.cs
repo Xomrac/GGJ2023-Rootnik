@@ -30,19 +30,27 @@ namespace Jam
 		private bool movingRight;
 		private Vector2 currentMovementSpeed;
 
+		private Vector3 startingScale;
+
 		private void FixedUpdate()
 		{
 			Move();
 		}
+
+		private void Start()
+		{
+			startingScale = transform.localScale;
+		}
+
 		void Flip(float speedValue)
 		{
 			if (speedValue > flipThreshold)
 			{
-				spriteRenderer.flipX = false;
+				transform.localScale = startingScale;
 			}
 			else if (speedValue < (-flipThreshold))
 			{
-				spriteRenderer.flipX = true;
+				transform.localScale = Vector3.Scale(startingScale, new Vector3(-1, 1, 1));
 			}
 		}
 		bool IsMoving(Vector2 moveSpeed,Vector2 moveTreshold)
