@@ -110,25 +110,28 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height: 2.03
-    - _LocalToWorldMultiplier: 1.7
+    - _Height: 200
+    - _LocalToWorldMultiplier: 0.19
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _PivotChange: 0.54
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Radius: 2.94
+    - _Radius: 277.63
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
     - _Surface: 1
+    - _TileMultipleyre: 0.01
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
+    - _offsetMultiplier: 0.1
+    - _tileFactor: 0.1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

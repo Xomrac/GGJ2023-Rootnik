@@ -9,7 +9,8 @@ public enum layers
 {
     Layer1,
     Layer2,
-    Layer3
+    Layer3,
+    nucleo
     
 }
 public struct PondMinAndObjects
@@ -21,16 +22,23 @@ public struct PondMinAndObjects
 [Serializable]
 public class PlanetStats: SerializedMonoBehaviour , ISavable
 {
+    [FoldoutGroup("don't touch")]
     public float lastVisitedTime;
-    public int rootsPlanted;
+    [FoldoutGroup("don't touch")]
     public layers maxReached;
+    [FoldoutGroup("don't touch")]
     public string UID;
     public Transform landingPoint;
     public Dictionary<layers, PondMinAndObjects> pondsValue;
     public Dictionary<layers, int> gainValue;
+    [FoldoutGroup("don't touch")]
     public List<Root> Roots;
+    [FoldoutGroup("don't touch")]
     public float radiusLenght2;
+    [FoldoutGroup("don't touch")]
     public float radiusLenght3;
+    [FoldoutGroup("don't touch")]
+    public float radiusnucleo;
 
     //si guadagna max maggiore metà minore
     

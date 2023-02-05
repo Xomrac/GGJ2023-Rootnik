@@ -25,15 +25,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4354566313521363523}
-  m_LocalRotation: {x: -0.29091147, y: 0.64449245, z: -0.29091147, w: 0.64449245}
-  m_LocalPosition: {x: 0.904, y: -1.22, z: 4.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.6592, y: -1.22, z: 4.03}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 561274959237802096}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -48.587}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4354566313521363522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -75,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26441bb795a902b41ab5d980f0d8d187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.88, y: 0.72, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.8783307, y: 0.72, z: 1.090808}
+  m_Center: {x: -0.011362076, y: 0.000008806224, z: -0.13461979}
 --- !u!1 &5266328031797728316
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,9 +126,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266328031797728316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4, z: 0}
-  m_LocalScale: {x: 0.49, y: 0.49, z: 0.49}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -0.11, y: -0.23665, z: -0.74}
+  m_LocalScale: {x: 15.139412, y: 0.25471842, z: 4.3853116}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4354566313521363521}
   m_RootOrder: 0
@@ -196,10 +195,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b85807743fb424aa5004ce0cdf09196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeAnim: 2
+  howMuchGrows: 40
+  howMuchDecres: 60
+  GainDecreseAfterNucleo: 0.65
+  GainIncreaseAfterNucleoRecover: 0.35
+  timeAnim: 1.3
   wasUsedInThisVisit: 0
   planetWhereIsPlanted: {fileID: 0}
   layer: 0
-  howMuchGrows: 0.2
   currGrowth: 0
   maxRadius: 0
+  HeightForLayer3: 0
+  HeightForLayer2: 0
+  HeightFornucleo: 0
+  MaxGain: 0
+  currGain: 0
+  NucleoTouched: 0

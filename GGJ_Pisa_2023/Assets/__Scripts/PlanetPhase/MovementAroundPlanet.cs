@@ -15,13 +15,16 @@ public class MovementAroundPlanet : MonoBehaviour
     public PlanetStats firstPlanet;
     public PlanetStats second;
     public PlanetStats curr;
-    private Animator animator;
     public GameObject basePrefab;
+    public GameObject interact;
+    public GameObject move;
+    public GameObject drop;
+    public GameObject iddle;
+    public bool canMove;
 
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         player = ReInput.players.GetPlayer(0);
         player.controllers.maps.SetMapsEnabled(false, RewiredConsts.Category.OnPlanet);
         OnLand(firstPlanet);
@@ -46,7 +49,6 @@ public class MovementAroundPlanet : MonoBehaviour
                 {
                     VARIABLE.wasUsedInThisVisit = false;
                 }
-                //instancePlanet.lastVisitedTime++;
             }
         }
     }
@@ -54,13 +56,12 @@ public class MovementAroundPlanet : MonoBehaviour
     public void Move()
     {
         Vector3 newPos;
-        angle += vel * player.GetAxis(RewiredConsts.Action.Move) * Time.deltaTime;
+        angle += vel * player.GetAxis(RewiredConsts.Action.Move)*-1 * Time.deltaTime;
         float angledegrees = angle * Mathf.Rad2Deg;
-        newPos.x = transform.position.x;
+        newPos.x = currCenterPlanet.x + (radius * math.sin(angle));
         newPos.y = currCenterPlanet.y + (radius * math.cos(angle));
-        newPos.z = currCenterPlanet.z + (radius * math.sin(angle));
-        Quaternion rot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y,
-            -angledegrees);
+        newPos.z = transform.position.z;
+        Quaternion rot = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y,-angledegrees);
         transform.position = newPos;
         transform.rotation = rot;
     }
@@ -77,28 +78,36 @@ public class MovementAroundPlanet : MonoBehaviour
             OnLand(firstPlanet);
         }
 
-        if (player.GetAxis(RewiredConsts.Action.Move) != 0)
-        {
+        if ((player.GetAxis(RewiredConsts.Action.Move) != 0) && canMove)
+        { 
             Move();
-            animator.SetBool("IsWalking", true);
+           move.SetActive(true);
+           iddle.SetActive(false);
         }
-        else
+        else if (canMove)
         {
-            animator.SetBool("IsWalking", false);
+            move.SetActive(false);
+            iddle.SetActive(true);
         }
 
         if (player.GetButtonDown(RewiredConsts.Action.Plant))
         {
             if (curr.Roots.Count <= 2)
             {
-                animator.SetTrigger("Plant");
-                var temp = Instantiate(basePrefab, piedi.position, transform.rotation);
-                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius",
-                    Vector3.Distance(piedi.position, curr.transform.position));
-                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(0.4f));
+                canMove = false;
+                drop.SetActive(true);
+                move.SetActive(false);
+                iddle.SetActive(false);
+                var temp = Instantiate(basePrefab,new Vector3(piedi.position.x,piedi.position.y,piedi.position.z+20f), transform.rotation);
+                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", 0);
+                temp.GetComponentInChildren<Root>().wasUsedInThisVisit = true;
+                temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius", radius-(GetComponent<Collider>().bounds.extents.y ));
+                temp.GetComponentInChildren<Root>().maxRadius = Vector3.Distance(piedi.position, curr.transform.position);
+                StartCoroutine(temp.GetComponentInChildren<Root>().RootAnimation(40));
                 temp.GetComponentInChildren<Root>().planetWhereIsPlanted = curr;
                 temp.GetComponentInChildren<Root>().setHeights();
                 curr.Roots.Add(temp.GetComponentInChildren<Root>());
+                StartCoroutine(waitForSecondsMove(2));
                 foreach (var instancePlanet in PlanetsManager.Instance.planets)
                 {
                     if (instancePlanet != curr)
@@ -114,15 +123,27 @@ public class MovementAroundPlanet : MonoBehaviour
         }
     }
 
+    public IEnumerator waitForSecondsMove(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        canMove = true;
+        interact.SetActive(false);
+        drop.SetActive(false);
+        iddle.SetActive(true);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponentInChildren<Root>())
         {
             var temp = other.GetComponentInChildren<Root>();
-            Debug.Log("plant!");
             if (!temp.wasUsedInThisVisit)
             {
-                StartCoroutine(temp.RootAnimation(temp.currGrowth+temp.howMuchGrows));
+                canMove = false;
+                move.SetActive(false);
+                iddle.SetActive(false);
+                interact.SetActive(true);
+                StartCoroutine(waitForSecondsMove(2));
+                StartCoroutine(temp.RootAnimation(Mathf.Clamp(temp.currGrowth+temp.howMuchGrows,0,temp.maxRadius)));
             }
         }
     }
