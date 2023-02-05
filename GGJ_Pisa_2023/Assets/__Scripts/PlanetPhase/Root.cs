@@ -118,15 +118,7 @@ public class Root : MonoBehaviour
 
     public void NumberOfLakes()
     {
-        Debug.DrawRay(transform.position, transform.up*-currGrowth,Color.blue);
-        hits = Physics.BoxCastAll(transform.position,new Vector3(30,30,30),transform.up*currGrowth,transform.rotation,currGrowth,LayerMask.GetMask("Puddle"));
-        if (hits!=null)
-        {
-            foreach (var VARIABLE in hits)
-            {
-                Debug.Log(VARIABLE.collider.gameObject.name);
-            }
-        }
+        
     }
 
     public IEnumerator RootAnimation(float howMuchToGrow)
@@ -145,6 +137,7 @@ public class Root : MonoBehaviour
         }
 
         currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
+        GetComponent<BoxCollider>().size=new Vector3( GetComponent<BoxCollider>().size.x, , GetComponent<BoxCollider>().size.z)
        
 
 CheckInWichLayer();
