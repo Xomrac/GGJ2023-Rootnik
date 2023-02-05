@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Jam;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RadialMenuController : SerializedMonoBehaviour
@@ -60,8 +61,10 @@ public class RadialMenuController : SerializedMonoBehaviour
 			buttons[index].gameObject.SetActive(true);
 			buttons[index].onClick.RemoveAllListeners();
 			buttons[index].GetComponent<Image>().sprite = resourcesSprites[keyValuePair.Key];
-			buttons[index].onClick.AddListener(TurnOffButtons);
-			buttons[index].onClick.AddListener(() =>{resourcesManager.StartConsume(keyValuePair.Key, keyValuePair.Value);});
+			buttons[index].GetComponent<CoolCustomButton>().pointerEntered += () => { resourcesManager.StartConsume(keyValuePair.Key, keyValuePair.Value);};
+			buttons[index].GetComponent<CoolCustomButton>().pointerExited += () => { resourcesManager.StopConsume();};
+			// buttons[index].onClick.AddListener(TurnOffButtons);
+			// buttons[index].onClick.AddListener(() =>{resourcesManager.StartConsume(keyValuePair.Key, keyValuePair.Value);});
 			index++;
 		}
 	}

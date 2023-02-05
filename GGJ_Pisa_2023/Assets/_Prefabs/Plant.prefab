@@ -196,8 +196,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   howMuchGrows: 40
-  howMuchDecres: 45
-  timeAnim: 2
+  howMuchDecres: 60
+  GainDecreseAfterNucleo: 0.65
+  GainIncreaseAfterNucleoRecover: 0.35
+  timeAnim: 1.3
   wasUsedInThisVisit: 0
   planetWhereIsPlanted: {fileID: 0}
   layer: 0
@@ -209,5 +211,3 @@ MonoBehaviour:
   MaxGain: 0
   currGain: 0
   NucleoTouched: 0
-  GainDecreseAfterNucleo: 0
-  GainIncreaseAfterNucleoRecover: 0
