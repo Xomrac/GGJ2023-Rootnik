@@ -22,6 +22,7 @@ public struct PondMinAndObjects
 [Serializable]
 public class PlanetStats: SerializedMonoBehaviour , ISavable
 {
+    public Fertility fert;
     [FoldoutGroup("don't touch")]
     public float lastVisitedTime;
     [FoldoutGroup("don't touch")]

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Jam.General;
 using Rewired;
 using Unity.Mathematics;
 using UnityEngine;
@@ -33,6 +34,23 @@ public class MovementAroundPlanet : MonoBehaviour
     private void OnLand(PlanetStats planet)
     {
         curr = planet;
+        switch (planet.fert)
+        {
+            case Fertility.Fertile:
+                AudioManaegr.Instance.playmusic("OstMain");
+                break;
+            case Fertility.NotSoFertile:
+                AudioManaegr.Instance.playmusic("OstMain");
+                break;
+            case Fertility.Barren:
+                AudioManaegr.Instance.playmusic("ostSterileBarren");
+                break;
+            case Fertility.Unfertile:
+                AudioManaegr.Instance.playmusic("ostSterileBarren");
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
         if (curr.wasVisited==false)
         {
             curr.SpawnPonds();

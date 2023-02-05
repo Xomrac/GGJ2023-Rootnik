@@ -2291,6 +2291,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  fert: 0
   lastVisitedTime: 0
   maxReached: 0
   UID: cced0f7d187517443819df89f66fb0e3

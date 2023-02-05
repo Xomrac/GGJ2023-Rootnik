@@ -95,16 +95,16 @@ public class Root : MonoBehaviour
             
             if (planetWhereIsPlanted.pondsValue[layers.Layer1].pondsObj.Contains(pond))
             {
-                PlayerResources.currentWater+=planetWhereIsPlanted.gainValue[layers.Layer1];
+                PlayerResources.modifyWater(planetWhereIsPlanted.gainValue[layers.Layer1]);
             }
 
             if (planetWhereIsPlanted.pondsValue[layers.Layer2].pondsObj.Contains(pond))
             {
-                PlayerResources.currentWater+=planetWhereIsPlanted.gainValue[layers.Layer2];
+                PlayerResources.modifyWater(planetWhereIsPlanted.gainValue[layers.Layer2]);
             }
             if (planetWhereIsPlanted.pondsValue[layers.Layer3].pondsObj.Contains(pond))
             {
-                PlayerResources.currentWater+=planetWhereIsPlanted.gainValue[layers.Layer3];
+                PlayerResources.modifyWater(planetWhereIsPlanted.gainValue[layers.Layer3]);
             }
             var temp = pond.GetComponent<Pond>();
             temp.numberOfTimeUsed++;
