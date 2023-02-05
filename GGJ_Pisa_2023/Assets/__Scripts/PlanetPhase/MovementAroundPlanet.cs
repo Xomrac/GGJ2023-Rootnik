@@ -33,6 +33,11 @@ public class MovementAroundPlanet : MonoBehaviour
     private void OnLand(PlanetStats planet)
     {
         curr = planet;
+        if (curr.wasVisited==false)
+        {
+            curr.SpawnPonds();
+        }
+        curr.wasVisited = true;
         transform.position = new Vector3(planet.landingPoint.position.x,
             planet.landingPoint.position.y+ (GetComponent<Collider>().bounds.extents.y ),
             planet.landingPoint.position.z);
@@ -133,9 +138,10 @@ public class MovementAroundPlanet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInChildren<Root>())
+        Debug.Log(other.gameObject.name);
+        if (other.GetComponent<Root>())
         {
-            var temp = other.GetComponentInChildren<Root>();
+            var temp = other.GetComponent<Root>();
             if (!temp.wasUsedInThisVisit)
             {
                 canMove = false;

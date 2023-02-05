@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4354566313521363521}
   - component: {fileID: 4354566313521363522}
-  - component: {fileID: 8812553277813341990}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -86,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &8812553277813341990
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4354566313521363523}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.8783307, y: 0.72, z: 1.090808}
-  m_Center: {x: -0.011362076, y: 0.000008806224, z: -0.13461979}
 --- !u!1 &5266328031797728316
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,11 +208,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266328031797728316}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 80.11, z: 4.5}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.36, y: 0, z: 4.5}
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!54 &1100268855537111092
 Rigidbody:
   m_ObjectHideFlags: 0

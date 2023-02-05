@@ -869,7 +869,7 @@ PrefabInstance:
     - target: {fileID: 390669802885137565, guid: ad796fa6eb019dc4fadb45318ce78320,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1061
+      value: 1064
       objectReference: {fileID: 0}
     - target: {fileID: 390669802885137566, guid: ad796fa6eb019dc4fadb45318ce78320,
         type: 3}
@@ -949,7 +949,7 @@ PrefabInstance:
     - target: {fileID: 5222978454550642917, guid: ad796fa6eb019dc4fadb45318ce78320,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1037
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 6677641519498669939, guid: ad796fa6eb019dc4fadb45318ce78320,
         type: 3}
@@ -1002,7 +1002,7 @@ PrefabInstance:
     - target: {fileID: 7564492093471534303, guid: ad796fa6eb019dc4fadb45318ce78320,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1058
+      value: 1061
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad796fa6eb019dc4fadb45318ce78320, type: 3}
@@ -1187,116 +1187,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1742359468}
-    - target: {fileID: 598367676, guid: d6239bc1d7564534fab9dd42e19aabbd, type: 3}
-      propertyPath: m_VersionIndex
-      value: 49
-      objectReference: {fileID: 0}
     - target: {fileID: 598367677, guid: d6239bc1d7564534fab9dd42e19aabbd, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 584003220}
-    - target: {fileID: 598367677, guid: d6239bc1d7564534fab9dd42e19aabbd, type: 3}
-      propertyPath: m_VersionIndex
-      value: 49
-      objectReference: {fileID: 0}
     - target: {fileID: 598367678, guid: d6239bc1d7564534fab9dd42e19aabbd, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 425414191}
-    - target: {fileID: 598367678, guid: d6239bc1d7564534fab9dd42e19aabbd, type: 3}
-      propertyPath: m_VersionIndex
-      value: 49
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917458996898603, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459039816566, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459143174680, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459267350709, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459338224329, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459453589041, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459483388325, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459582247445, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917459773440873, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460095535346, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460366970867, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460389309011, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460534122455, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460590043719, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460597586718, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460608535984, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237917460735258793, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790885498919717, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486573, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: m_Name
@@ -1311,193 +1209,182 @@ PrefabInstance:
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 36
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"gainValue","add_keys":{"$id":0,"$type":"System.Object[], mscorlib","$rlength":2,"$rcontent":[{"$id":1,"$type":"layers,
-        Assembly-CSharp",3},{"$id":2,"$type":"layers, Assembly-CSharp",3}]},"remove_keys":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"gainValue.{3es}","value":{"$id":0,"$type":"System.Int32, mscorlib",5}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[2]
       value: '"path":"pondsValue.{0es}","value":{"$id":0,"$type":"PondMinAndObjects,
         Assembly-CSharp","min":9,"pondsObj":{"$id":1,"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule]], mscorlib","$rlength":18,"$rcontent":[$eref:0,$eref:1,$eref:2,$eref:3,$eref:4,$eref:5,$eref:6,$eref:7,$eref:8,$eref:9,$eref:10,$eref:11,$eref:12,$eref:13,$eref:14,$eref:15,$eref:16,$eref:17]}}'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
       value: '"path":"pondsValue.{0es}.pondsObj.[0]","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[4]
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
       value: '"path":"pondsValue.{0es}.pondsObj.[1]","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
       value: '"path":"pondsValue.{0es}.pondsObj.[10]","value":$eref:10'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[6]
+      propertyPath: serializationData.PrefabModifications.Array.data[4]
       value: '"path":"pondsValue.{0es}.pondsObj.[11]","value":$eref:11'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[7]
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
       value: '"path":"pondsValue.{0es}.pondsObj.[12]","value":$eref:12'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[8]
+      propertyPath: serializationData.PrefabModifications.Array.data[6]
       value: '"path":"pondsValue.{0es}.pondsObj.[13]","value":$eref:13'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[9]
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
       value: '"path":"pondsValue.{0es}.pondsObj.[14]","value":$eref:14'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[10]
+      propertyPath: serializationData.PrefabModifications.Array.data[8]
       value: '"path":"pondsValue.{0es}.pondsObj.[2]","value":$eref:2'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[11]
+      propertyPath: serializationData.PrefabModifications.Array.data[9]
       value: '"path":"pondsValue.{0es}.pondsObj.[3]","value":$eref:3'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[12]
+      propertyPath: serializationData.PrefabModifications.Array.data[10]
       value: '"path":"pondsValue.{0es}.pondsObj.[4]","value":$eref:4'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[13]
+      propertyPath: serializationData.PrefabModifications.Array.data[11]
       value: '"path":"pondsValue.{0es}.pondsObj.[5]","value":$eref:5'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[14]
+      propertyPath: serializationData.PrefabModifications.Array.data[12]
       value: '"path":"pondsValue.{0es}.pondsObj.[6]","value":$eref:6'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[15]
+      propertyPath: serializationData.PrefabModifications.Array.data[13]
       value: '"path":"pondsValue.{0es}.pondsObj.[7]","value":$eref:7'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[16]
+      propertyPath: serializationData.PrefabModifications.Array.data[14]
       value: '"path":"pondsValue.{0es}.pondsObj.[8]","value":$eref:8'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[17]
+      propertyPath: serializationData.PrefabModifications.Array.data[15]
       value: '"path":"pondsValue.{0es}.pondsObj.[9]","value":$eref:9'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[18]
+      propertyPath: serializationData.PrefabModifications.Array.data[16]
       value: '"path":"pondsValue.{1es}","value":{"$id":0,"$type":"PondMinAndObjects,
         Assembly-CSharp","min":5,"pondsObj":{"$id":1,"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule]], mscorlib","$rlength":11,"$rcontent":[$eref:18,$eref:19,$eref:20,$eref:21,$eref:22,$eref:23,$eref:24,$eref:25,$eref:26,$eref:27,$eref:28]}}'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[19]
+      propertyPath: serializationData.PrefabModifications.Array.data[17]
       value: '"path":"pondsValue.{1es}.pondsObj.[0]","value":$eref:18'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[20]
+      propertyPath: serializationData.PrefabModifications.Array.data[18]
       value: '"path":"pondsValue.{1es}.pondsObj.[1]","value":$eref:19'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[21]
+      propertyPath: serializationData.PrefabModifications.Array.data[19]
       value: '"path":"pondsValue.{1es}.pondsObj.[10]","value":$eref:28'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[22]
+      propertyPath: serializationData.PrefabModifications.Array.data[20]
       value: '"path":"pondsValue.{1es}.pondsObj.[2]","value":$eref:20'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[23]
+      propertyPath: serializationData.PrefabModifications.Array.data[21]
       value: '"path":"pondsValue.{1es}.pondsObj.[3]","value":$eref:21'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[24]
+      propertyPath: serializationData.PrefabModifications.Array.data[22]
       value: '"path":"pondsValue.{1es}.pondsObj.[4]","value":$eref:22'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[25]
+      propertyPath: serializationData.PrefabModifications.Array.data[23]
       value: '"path":"pondsValue.{1es}.pondsObj.[5]","value":$eref:23'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[26]
+      propertyPath: serializationData.PrefabModifications.Array.data[24]
       value: '"path":"pondsValue.{1es}.pondsObj.[6]","value":$eref:24'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[27]
+      propertyPath: serializationData.PrefabModifications.Array.data[25]
       value: '"path":"pondsValue.{1es}.pondsObj.[7]","value":$eref:25'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[28]
+      propertyPath: serializationData.PrefabModifications.Array.data[26]
       value: '"path":"pondsValue.{1es}.pondsObj.[8]","value":$eref:26'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[29]
+      propertyPath: serializationData.PrefabModifications.Array.data[27]
       value: '"path":"pondsValue.{1es}.pondsObj.[9]","value":$eref:27'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[30]
+      propertyPath: serializationData.PrefabModifications.Array.data[28]
       value: '"path":"pondsValue.{2es}","value":{"$id":0,"$type":"PondMinAndObjects,
         Assembly-CSharp","min":2,"pondsObj":{"$id":1,"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule]], mscorlib","$rlength":5,"$rcontent":[$eref:29,$eref:30,$eref:31,$eref:32,$eref:33]}}'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[31]
+      propertyPath: serializationData.PrefabModifications.Array.data[29]
       value: '"path":"pondsValue.{2es}.pondsObj.[0]","value":$eref:29'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[32]
+      propertyPath: serializationData.PrefabModifications.Array.data[30]
       value: '"path":"pondsValue.{2es}.pondsObj.[1]","value":$eref:30'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[33]
+      propertyPath: serializationData.PrefabModifications.Array.data[31]
       value: '"path":"pondsValue.{2es}.pondsObj.[2]","value":$eref:31'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[34]
+      propertyPath: serializationData.PrefabModifications.Array.data[32]
       value: '"path":"pondsValue.{2es}.pondsObj.[3]","value":$eref:32'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[35]
+      propertyPath: serializationData.PrefabModifications.Array.data[33]
       value: '"path":"pondsValue.{2es}.pondsObj.[4]","value":$eref:33'
       objectReference: {fileID: 0}
     - target: {fileID: 9204790885726486574, guid: d6239bc1d7564534fab9dd42e19aabbd,
@@ -1730,101 +1617,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9204790886048309923, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
     - target: {fileID: 9204790886048309925, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 425414191}
-    - target: {fileID: 9204790886092228468, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886156654826, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886162483662, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886265735964, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
     - target: {fileID: 9204790886265735966, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 584003220}
-    - target: {fileID: 9204790886268937230, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886612159413, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886616627653, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886822342374, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790886882260190, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790887005114320, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790887032619565, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790887115312340, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
     - target: {fileID: 9204790887115312342, guid: d6239bc1d7564534fab9dd42e19aabbd,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1742359468}
-    - target: {fileID: 9204790887240912783, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790887252102221, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204790887283108608, guid: d6239bc1d7564534fab9dd42e19aabbd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Pond
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6239bc1d7564534fab9dd42e19aabbd, type: 3}
 --- !u!1 &1330983811 stripped
@@ -2001,6 +1808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354566313521363523, guid: 66b1c62d58c9b8540961eb95b07987a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66b1c62d58c9b8540961eb95b07987a5, type: 3}
@@ -2820,11 +2632,23 @@ PrefabInstance:
       propertyPath: firstPlanet
       value: 
       objectReference: {fileID: 1009021903}
+    - target: {fileID: 3833190071272053508, guid: 48c3b46338f886b4dbaac92bf454e4ab,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3997002724210914136, guid: 48c3b46338f886b4dbaac92bf454e4ab,
+        type: 3}
     - target: {fileID: 4620339199314513166, guid: 48c3b46338f886b4dbaac92bf454e4ab,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -1672146384160521659, guid: 48c3b46338f886b4dbaac92bf454e4ab,
+        type: 3}
+    - target: {fileID: 5712400897960940370, guid: 48c3b46338f886b4dbaac92bf454e4ab,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1187520463380963034, guid: 48c3b46338f886b4dbaac92bf454e4ab,
         type: 3}
     - target: {fileID: 7132966477194225032, guid: 48c3b46338f886b4dbaac92bf454e4ab,
         type: 3}

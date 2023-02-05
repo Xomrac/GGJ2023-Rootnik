@@ -40,6 +40,8 @@ public class PlanetStats: SerializedMonoBehaviour , ISavable
     [FoldoutGroup("don't touch")]
     public float radiusnucleo;
 
+    public bool wasVisited;
+
     //si guadagna max maggiore metà minore
     
 
@@ -53,15 +55,12 @@ public class PlanetStats: SerializedMonoBehaviour , ISavable
                 if (i<layer.Value.min)
                 {
                     layer.Value.pondsObj[i].SetActive(true);
-                    Debug.Log(i);
                 }
                 else
                 {
                     float rand = Random.Range(0, 101);
-                    Debug.Log(layer.Value.pondsObj[i].name+" not spawned "+rand+" "+percent/i);
                     if (rand<percent/i)
                     {
-                        Debug.Log(layer.Value.pondsObj[i].name+" "+rand+" "+percent/i);
                         layer.Value.pondsObj[i].SetActive(true);
                     }
                
