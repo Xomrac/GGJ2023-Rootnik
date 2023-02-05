@@ -37,6 +37,8 @@ public class Root : MonoBehaviour
     [FoldoutGroup("don't touch")]
     public bool NucleoTouched;
 
+    private RaycastHit[] hits;
+
     public void setHeights()
     {
         HeightForLayer2 = maxRadius - planetWhereIsPlanted.radiusLenght3;
@@ -47,12 +49,7 @@ public class Root : MonoBehaviour
     public void CollectResource()
     {
         wasUsedInThisVisit = true;
-        if (GetComponent<MeshRenderer>().material.GetFloat("_Height") >= maxRadius)
-        {
-            Debug.Log("maxReached");
-        }
-
-        if (layer==layers.nucleo)
+       if (layer==layers.nucleo)
         {
             if (NucleoTouched)
             {
@@ -73,33 +70,31 @@ public class Root : MonoBehaviour
                 if (planetWhereIsPlanted.Roots.IndexOf(this) != 0)
                 {
                     PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer] / 2f;
-                    Debug.Log(PlayerResources.currentFood + " half");
                 }
                 else
                 {
                     PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer];
-                    Debug.Log(PlayerResources.currentFood);
                 } 
             }
             else
             {
-                Debug.Log("planetHealing");
-                currGain= Mathf.Clamp(currGain+GainIncreaseAfterNucleoRecover,0 ,MaxGain);
                 if (planetWhereIsPlanted.Roots.IndexOf(this) != 0)
                 {
                     PlayerResources.currentFood += currGain / 2f;
-                    Debug.Log(PlayerResources.currentFood + " half");
                 }
                 else
                 {
                     PlayerResources.currentFood += currGain;
-                    Debug.Log(PlayerResources.currentFood);
                 } 
 
             }
             
         }
-        Debug.Log(currGain);
+    }
+
+    private void Update()
+    {
+        NumberOfLakes();
     }
 
     public void Decrease()
@@ -110,14 +105,28 @@ public class Root : MonoBehaviour
         }
         else
         {
-            GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", currGrowth - howMuchDecres);
+            if (NucleoTouched)
+            {
+                currGain= Mathf.Clamp(currGain+GainIncreaseAfterNucleoRecover,0 ,MaxGain);
+  
+            }
             currGrowth -= howMuchDecres;
+            GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", currGrowth);
         }
+        CheckInWichLayer();
     }
 
     public void NumberOfLakes()
     {
-        
+        Debug.DrawRay(transform.position, transform.up*-currGrowth,Color.blue);
+        hits = Physics.BoxCastAll(transform.position,new Vector3(30,30,30),transform.up*currGrowth,transform.rotation,currGrowth,LayerMask.GetMask("Puddle"));
+        if (hits!=null)
+        {
+            foreach (var VARIABLE in hits)
+            {
+                Debug.Log(VARIABLE.collider.gameObject.name);
+            }
+        }
     }
 
     public IEnumerator RootAnimation(float howMuchToGrow)
@@ -129,7 +138,6 @@ public class Root : MonoBehaviour
         while (elapsedTime < timeAnim)
         {
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
             val = Mathf.Lerp(dioMaiale, howMuchToGrow, elapsedTime / timeAnim);
             GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", val);
             currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
@@ -137,6 +145,14 @@ public class Root : MonoBehaviour
         }
 
         currGrowth = GetComponentInChildren<MeshRenderer>().material.GetFloat("_Height");
+       
+
+CheckInWichLayer();
+        CollectResource();
+    }
+
+    public void CheckInWichLayer()
+    {
         if (currGrowth > HeightForLayer2)
         {
             layer = layers.Layer2;
@@ -150,8 +166,5 @@ public class Root : MonoBehaviour
         {
             layer = layers.nucleo;
         }
-
-
-        CollectResource();
     }
 }

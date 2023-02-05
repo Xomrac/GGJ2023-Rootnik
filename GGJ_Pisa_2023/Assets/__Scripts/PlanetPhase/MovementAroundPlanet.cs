@@ -49,7 +49,6 @@ public class MovementAroundPlanet : MonoBehaviour
                 {
                     VARIABLE.wasUsedInThisVisit = false;
                 }
-                //instancePlanet.lastVisitedTime++;
             }
         }
     }
@@ -136,9 +135,7 @@ public class MovementAroundPlanet : MonoBehaviour
     {
         if (other.GetComponentInChildren<Root>())
         {
-            
             var temp = other.GetComponentInChildren<Root>();
-            Debug.Log("plant!");
             if (!temp.wasUsedInThisVisit)
             {
                 canMove = false;
