@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Jam;
+using Riutilizzabile;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public enum ResourceType
 	Oxygen
 }
 
-public class ShipResourcesManager : MonoBehaviour
+public class ShipResourcesManager : Singleton<ShipResourcesManager>
 {
 
 	[BoxGroup("Resources Amount")] [HorizontalGroup("Resources Amount/Levels")] [LabelText("Food")] [LabelWidth(40)] [SerializeField]
@@ -24,11 +25,27 @@ public class ShipResourcesManager : MonoBehaviour
 
 	public static Action oxygenFinished;
 
+	public List<ShipInteractionPoint> plants;
+
+	public ShipInteractionPoint currentInteractionPoint                         ;
+
 	private void Update()
 	{
 		foodLevel = PlayerResources.currentFood;
 		waterLevel = PlayerResources.currentWater;
 		oxygenLevel = PlayerResources.currentOxygen;
+		var counter = 0;
+		foreach (ShipInteractionPoint plant in plants)
+		{
+			if (plant.isDead)
+			{
+				counter++;
+			}
+		}
+		if (counter>=Mathf.Ceil(plants.Count/2))
+		{
+			//DEADDDD
+		}
 	}
 
 	private void OnEnable()
@@ -42,7 +59,15 @@ public class ShipResourcesManager : MonoBehaviour
 		ShipInteractionPoint.onExitPoint -= StopConsume;
 	}
 
-	private void StopConsume()
+	[Button]
+	private void SetResources(Vector3 resourcesValue)
+	{
+		PlayerResources.currentFood = resourcesValue.x;
+		PlayerResources.currentWater = resourcesValue.y;
+		PlayerResources.currentOxygen = resourcesValue.z;
+	}
+
+	public void StopConsume()
 	{
 		StopAllCoroutines();
 	}
@@ -66,21 +91,26 @@ public class ShipResourcesManager : MonoBehaviour
 
 public void StartConsume(ResourceType resourceType, float consume)
 {
+	Debug.Log($"Starting using {resourceType}");
 	if (resourceType == ResourceType.Oxygen)
 	{
 		ConsumeOxygen(consume);
 	}
 	StartCoroutine(ConsumeCoroutine());
-
 	IEnumerator ConsumeCoroutine()
 	{
 		switch (resourceType)
 		{
 			case ResourceType.Food:
 				PlayerResources.currentFood -= consume;
+				
 				if (foodLevel < 0)
 				{
 					foodLevel = 0;
+				}
+				else
+				{
+					currentInteractionPoint.needs[ResourceType.Food] -= consume;
 				}
 				break;
 			case ResourceType.Water:
@@ -88,6 +118,10 @@ public void StartConsume(ResourceType resourceType, float consume)
 				if (waterLevel < 0)
 				{
 					waterLevel = 0;
+				}
+				else
+				{
+					currentInteractionPoint.needs[ResourceType.Food] -= consume;
 				}
 				break;
 		}
