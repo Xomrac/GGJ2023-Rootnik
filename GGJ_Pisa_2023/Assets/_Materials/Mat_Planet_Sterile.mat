@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Planet_Layer0
+  m_Name: Mat_Planet_Sterile
   m_Shader: {fileID: -6465566751694194690, guid: 83ca0552565e8f54b9ab04c42f4d13de,
     type: 3}
   m_ValidKeywords: []
