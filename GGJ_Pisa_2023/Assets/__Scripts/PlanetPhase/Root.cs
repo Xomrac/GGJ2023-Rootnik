@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Jam;
+using Sirenix.OdinInspector;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,21 +9,39 @@ using UnityEngine.Serialization;
 
 public class Root : MonoBehaviour
 {
-    public float timeAnim;
-    public bool wasUsedInThisVisit = false;
-    public PlanetStats planetWhereIsPlanted;
-    public layers layer = layers.Layer1;
     public float howMuchGrows;
     public float howMuchDecres;
+    public float GainDecreseAfterNucleo;
+    public float GainIncreaseAfterNucleoRecover;
+    public float timeAnim;
+    [FoldoutGroup("don't touch")]
+    public bool wasUsedInThisVisit = false;
+    [FoldoutGroup("don't touch")]
+    public PlanetStats planetWhereIsPlanted;
+    [FoldoutGroup("don't touch")]
+    public layers layer = layers.Layer1;
+    [FoldoutGroup("don't touch")]
     public float currGrowth;
+    [FoldoutGroup("don't touch")]
     public float maxRadius;
+    [FoldoutGroup("don't touch")]
     public float HeightForLayer3;
+    [FoldoutGroup("don't touch")]
     public float HeightForLayer2;
+    [FoldoutGroup("don't touch")]
+    public float HeightFornucleo;
+    [FoldoutGroup("don't touch")]
+    public float MaxGain;
+    [FoldoutGroup("don't touch")]
+    public float currGain;
+    [FoldoutGroup("don't touch")]
+    public bool NucleoTouched;
 
     public void setHeights()
     {
         HeightForLayer2 = maxRadius - planetWhereIsPlanted.radiusLenght3;
         HeightForLayer3 = maxRadius - planetWhereIsPlanted.radiusLenght2;
+        HeightFornucleo = maxRadius - planetWhereIsPlanted.radiusnucleo;
     }
 
     public void CollectResource()
@@ -32,19 +51,55 @@ public class Root : MonoBehaviour
         {
             Debug.Log("maxReached");
         }
-        else
+
+        if (layer==layers.nucleo)
         {
-            if (planetWhereIsPlanted.Roots.IndexOf(this) != 0)
+            if (NucleoTouched)
             {
-                PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer] / 2f;
-                Debug.Log(PlayerResources.currentFood + " half");
+              currGain= Mathf.Clamp(currGain -GainDecreseAfterNucleo,0 ,MaxGain);
             }
             else
             {
-                PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer];
-                Debug.Log(PlayerResources.currentFood);
+                MaxGain = planetWhereIsPlanted.gainValue[layer];
+                currGain = MaxGain;
+                NucleoTouched = true;
             }
+            PlayerResources.currentFood += currGain;
         }
+        else
+        {
+            if (!NucleoTouched)
+            {
+                if (planetWhereIsPlanted.Roots.IndexOf(this) != 0)
+                {
+                    PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer] / 2f;
+                    Debug.Log(PlayerResources.currentFood + " half");
+                }
+                else
+                {
+                    PlayerResources.currentFood += planetWhereIsPlanted.gainValue[layer];
+                    Debug.Log(PlayerResources.currentFood);
+                } 
+            }
+            else
+            {
+                Debug.Log("planetHealing");
+                currGain= Mathf.Clamp(currGain+GainIncreaseAfterNucleoRecover,0 ,MaxGain);
+                if (planetWhereIsPlanted.Roots.IndexOf(this) != 0)
+                {
+                    PlayerResources.currentFood += currGain / 2f;
+                    Debug.Log(PlayerResources.currentFood + " half");
+                }
+                else
+                {
+                    PlayerResources.currentFood += currGain;
+                    Debug.Log(PlayerResources.currentFood);
+                } 
+
+            }
+            
+        }
+        Debug.Log(currGain);
     }
 
     public void Decrease()
@@ -60,6 +115,10 @@ public class Root : MonoBehaviour
         }
     }
 
+    public void NumberOfLakes()
+    {
+        
+    }
 
     public IEnumerator RootAnimation(float howMuchToGrow)
     {
@@ -85,6 +144,11 @@ public class Root : MonoBehaviour
         if (currGrowth > HeightForLayer3)
         {
             layer = layers.Layer3;
+        }
+
+        if (currGrowth>HeightFornucleo)
+        {
+            layer = layers.nucleo;
         }
 
 

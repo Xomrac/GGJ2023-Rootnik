@@ -195,13 +195,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b85807743fb424aa5004ce0cdf09196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howMuchGrows: 40
+  howMuchDecres: 45
   timeAnim: 2
   wasUsedInThisVisit: 0
   planetWhereIsPlanted: {fileID: 0}
   layer: 0
-  howMuchGrows: 5.14
-  howMuchDecres: 6
   currGrowth: 0
   maxRadius: 0
   HeightForLayer3: 0
   HeightForLayer2: 0
+  HeightFornucleo: 0
+  MaxGain: 0
+  currGain: 0
+  NucleoTouched: 0
+  GainDecreseAfterNucleo: 0
+  GainIncreaseAfterNucleoRecover: 0
