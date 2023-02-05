@@ -38,6 +38,7 @@ namespace Jam
 		{
 			cinemachineVirtualCamera.Follow = planet.focusPoint.transform;
 			cinemachineVirtualCamera.LookAt = planet.focusPoint.transform;
+			CameraManager.Instance.ChangeOffsetToMap();
 			planetInfoDisplayer.DisplayInfos(planet);
 			canvasGroup.Set(0,false,false);
 		}
@@ -50,6 +51,7 @@ namespace Jam
 				yield return new WaitForSeconds(FadeController.Instance.HalfFadeTime);
 				cinemachineVirtualCamera.Follow = defaultLookPoint;
 				cinemachineVirtualCamera.LookAt = defaultLookPoint;
+				CameraManager.Instance.ChangeoffsetToPlayer();
 				canvasGroup.Set(1, true, true);
 			}
 			

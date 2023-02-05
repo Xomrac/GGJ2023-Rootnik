@@ -1,0 +1,49 @@
+FRED.png
+size:1870,851
+filter:Linear,Linear
+pma:true
+BOCCA
+bounds:1567,156,52,28
+offsets:1,1,54,30
+CORPO
+bounds:1592,476,194,373
+offsets:0,2,195,375
+FOGLIA CENTRO
+bounds:1232,217,185,367
+offsets:1,1,187,369
+FOGLIA DX
+bounds:1232,586,358,263
+offsets:1,1,361,269
+FOGLIA SX
+bounds:1576,186,288,184
+offsets:1,2,291,187
+rotate:90
+GAMBA DX GRANDE
+bounds:1419,52,146,259
+offsets:1,1,148,261
+GAMBA DX PICCOLA
+bounds:1567,38,115,256
+offsets:1,3,233,267
+rotate:90
+GAMBA SX GRANDE
+bounds:1419,313,155,271
+offsets:1,1,157,273
+GAMBA SX PICCOLA
+bounds:1762,155,106,249
+offsets:1,1,108,251
+OCCHI APERTI
+bounds:1232,13,202,84
+offsets:1,1,204,86
+rotate:90
+OCCHI CHIUSI
+bounds:1318,22,193,76
+offsets:1,1,195,79
+rotate:90
+TERRICCIO
+bounds:1788,406,443,69
+offsets:1,1,445,71
+rotate:90
+VETRO
+bounds:2,2,847,1228
+offsets:17,1,866,1237
+rotate:90
