@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FresnelPower: -0.31
-    - _NoiseScale: 607.07
+    - _NoiseScale: 408
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Range: 0.7
@@ -49,7 +49,7 @@ Material:
     - _TimePower: 0.05
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _MaskMinMax: {r: 1.6, g: -0.73, b: 0, a: 0}
+    - _MaskMinMax: {r: 1.44, g: -0.21, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1862911317255643468
 MonoBehaviour:
