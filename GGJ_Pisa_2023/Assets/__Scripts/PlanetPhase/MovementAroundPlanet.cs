@@ -26,13 +26,13 @@ public class MovementAroundPlanet : MonoBehaviour
 
     private void Start()
     {
-        player = ReInput.players.GetPlayer(0);
-        player.controllers.maps.SetMapsEnabled(false, RewiredConsts.Category.OnPlanet);
-        OnLand(firstPlanet);
+        
     }
 
-    private void OnLand(PlanetStats planet)
+    public void OnLand(PlanetStats planet)
     {
+        player = ReInput.players.GetPlayer(0);
+        // player.controllers.maps.SetMapsEnabled(false, RewiredConsts.Category.OnPlanet);
         curr = planet;
         switch (planet.fert)
         {
@@ -60,7 +60,7 @@ public class MovementAroundPlanet : MonoBehaviour
             planet.landingPoint.position.y+ (GetComponent<Collider>().bounds.extents.y ),
             planet.landingPoint.position.z);
         currCenterPlanet = planet.transform.position;
-        player.controllers.maps.SetMapsEnabled(true, RewiredConsts.Category.OnPlanet);
+        // player.controllers.maps.SetMapsEnabled(true, RewiredConsts.Category.OnPlanet);
         radius = Vector3.Distance(transform.position, planet.gameObject.transform.position);
         planet.lastVisitedTime = 0;
         Debug.DrawLine(transform.position, currCenterPlanet, Color.red, 10f);
@@ -79,7 +79,7 @@ public class MovementAroundPlanet : MonoBehaviour
     public void Move()
     {
         Vector3 newPos;
-        angle += vel * player.GetAxis(RewiredConsts.Action.Move)*-1 * Time.deltaTime;
+        angle += vel * Input.GetAxis("Horizontal") * Time.deltaTime;
         float angledegrees = angle * Mathf.Rad2Deg;
         newPos.x = currCenterPlanet.x + (radius * math.sin(angle));
         newPos.y = currCenterPlanet.y + (radius * math.cos(angle));
@@ -91,15 +91,6 @@ public class MovementAroundPlanet : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            OnLand(second);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            OnLand(firstPlanet);
-        }
 
         if ((player.GetAxis(RewiredConsts.Action.Move) != 0) && canMove)
         { 
@@ -113,7 +104,7 @@ public class MovementAroundPlanet : MonoBehaviour
             iddle.SetActive(true);
         }
 
-        if (player.GetButtonDown(RewiredConsts.Action.Plant))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (curr.Roots.Count <= 2)
             {
@@ -121,7 +112,7 @@ public class MovementAroundPlanet : MonoBehaviour
                 drop.SetActive(true);
                 move.SetActive(false);
                 iddle.SetActive(false);
-                var temp = Instantiate(basePrefab,new Vector3(piedi.position.x,piedi.position.y,piedi.position.z+20f), transform.rotation);
+                var temp = Instantiate(basePrefab,new Vector3(piedi.position.x,piedi.position.y,piedi.position.z+70f), transform.rotation);
                 temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Height", 0);
                 temp.GetComponentInChildren<Root>().wasUsedInThisVisit = true;
                 temp.GetComponentInChildren<MeshRenderer>().material.SetFloat("_Radius", radius-(GetComponent<Collider>().bounds.extents.y ));

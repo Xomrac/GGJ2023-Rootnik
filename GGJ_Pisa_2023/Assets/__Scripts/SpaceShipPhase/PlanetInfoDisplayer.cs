@@ -37,8 +37,11 @@ namespace Jam
 		public void Depart()
 		{
 			TravelManager.Instance.StartVoyaje(selectedPlanet.TimeToReach);
-			UnFocus();
-			levelSelectionManager.GoBack();
+			TravelManager.Instance.planetChosen = selectedPlanet.index;
+			canvasGroup.alpha = 0;
+			canvasGroup.interactable = false;
+			canvasGroup.blocksRaycasts = false;
+			Departer.Instance.Exit();
 		}
 		
 	}
